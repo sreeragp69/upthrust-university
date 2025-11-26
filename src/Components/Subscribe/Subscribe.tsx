@@ -9,7 +9,7 @@ import type {
 } from "../../types/Subscribe.type";
 import { SUBSCRIBE_DATA } from "../../constants/Subscribe.data";
 import SubscribeSkeleton from "./SubscribeSkeleton";
-import SubscribeImg from '../../assets/images/cards/subscribe.png'
+import SubscribeImg from '../../assets/images/cards/subscribe.svg'
 
 const Subscribe: React.FC<SubscribeProps> = ({ isLoading = false }) => {
   const [formData, setFormData] = useState<SubscribeFormData>({ email: "" });

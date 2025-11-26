@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ScrollToTop } from './Components/common/ScrollToTop';
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import AppLayout from './Components/layout/AppLayout';
