@@ -33,7 +33,7 @@ const LayoutContent: React.FC = () => {
 
         {/* 🔹 Conditional breakpoints */}
         <div
-          className={` mx-auto px-4  md:px-0   max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl)`}
+          className={` mx-auto   md:px-0   max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl)`}
         >
           <Outlet />
         </div>
