@@ -20,12 +20,10 @@ export const SidebarProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      const mobile = window.innerWidth < 768;
-      setIsMobile(mobile);
+      const mobile = window.innerWidth < 1024; // lg breakpoint
       if (!mobile) {
         setIsMobileOpen(false);
       }

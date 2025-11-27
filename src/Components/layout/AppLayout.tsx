@@ -3,9 +3,9 @@ import { SidebarProvider, useSidebar } from "../context/SidebarContext";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Backdrop from "./Backdrop";
+import MobileSidebar from "./MobileSidebar";
 // import AppSidebar from "./AppSidebar";
 // import AppHeaderSkeleton from "../components/AppHeader/Skeletons/AppHeaderSkeleton";
-import { useEffect, useState } from "react";
 // import AppFooter from "./AppFooter";
 // import {
 //   BreakPointProvider,
@@ -16,17 +16,15 @@ import AppFooter from "./Footer";
 const LayoutContent: React.FC = () => {
   const { isMobileOpen, setIsMobileOpen } = useSidebar();
 //   const { useBreakpoints } = useBreakPoint(); // 👈 consume context
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div className="min-h-screen flex">
       {/* <AppSidebar /> */}
 
+      {/* Mobile Sidebar */}
+      <MobileSidebar />
+
+      {/* Backdrop overlay for mobile */}
       {isMobileOpen && <Backdrop onClick={() => setIsMobileOpen(false)} />}
 
       <div className="flex-1 bg-themeBackgroundColor transition-all duration-300 ease-in-out">
