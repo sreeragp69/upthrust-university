@@ -91,7 +91,7 @@ const CollabSection = () => {
           out talented individuals.
         </motion.p>
 
-        <div className="bg-[#E2ECFF] p-6 xl:rounded-3xl 2xl:rounded-4xl relative col-span-4">
+        <div className="bg-[#E2ECFF]  p-6 xl:rounded-3xl 2xl:rounded-4xl relative col-span-4">
           <Title
             title="The Upthrust Eduversity"
             className="text-start! text-base! sm:text-base! md:text-lg! lg:text-xl! xl:text-2xl! 2xl:text-3xl! leading-tight!"
