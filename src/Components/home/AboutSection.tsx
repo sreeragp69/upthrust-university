@@ -38,7 +38,7 @@ const AboutSection = () => {
       variants={containerVariants}
     >
       <motion.div
-        className=" mx-auto  lg:mt-10 grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-10 py-5"
+        className=" mx-auto  lg:mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 py-5"
         variants={containerVariants}
       >
         {/* Left Text Section */}

@@ -3,14 +3,15 @@ import CentreSection from "../Components/home/CentreSection";
 import { HomeCourse } from "../Components/home/HomeCourse";
 import SuccessStory from "../Components/home/SuccessStory";
 import VideoSection from "../Components/home/VideoSection";
-
+import CollabSection from "../Components/home/CollabSection";
 const Home = () => {
   return (
-    <div className="">
+    <div className="px-8">
       <HomeCourse />
       <AboutSection />
       <VideoSection />
       <SuccessStory />
+      <CollabSection />
       <CentreSection />
     </div>
   );

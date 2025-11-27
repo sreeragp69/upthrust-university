@@ -95,20 +95,17 @@ export const HomeCourse: React.FC = () => {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12  p-6 md:p-10 lg:p-12">
             {/* Left Image */}
-            <div className="col-span-5  hidden xl:block"></div>
+            <div className=" col-span-3 2xl:col-span-5  hidden xl:block"></div>
             <motion.div
               key={`image-${selectedCourse.id}`}
-              // initial={{ opacity: 0, x: -50 }}
-              // animate={{ opacity: 1, x: 0 }}
-              // transition={{ duration: 0.6 }}
+
               className="hidden xl:flex  items-center justify-center  lg:col-span-5 absolute left-6 2xl:left-14   bottom-0"
             >
               <motion.img
                 src={selectedCourse.image}
                 alt="Game Developer"
-                className="w-full h-96 xl:h-auto object-cover rounded-2xl"
-                // whileHover={{ scale: 1.05 }}
-                // transition={{ duration: 0.3 }}
+                className="w-full h-96 xl:h-72 2xl:h-auto object-cover rounded-2xl"
+              
               />
             </motion.div>
 
@@ -141,7 +138,7 @@ export const HomeCourse: React.FC = () => {
 
               <div className="space-y-8">
                 <motion.p
-                  className="text-[#121212] text-sm md:text-base lg:text-base  xl:text-lg  2xl:text-xl font-light font-alexandria lg:leading-6 xl:leading-6  2xl:leading-7 xl:w-[65%]"
+                  className="text-[#121212] text-sm md:text-base lg:text-base  xl:text-lg  2xl:text-xl font-light font-alexandria lg:leading-6 xl:leading-6  2xl:leading-7 2xl:w-[65%]"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
@@ -151,7 +148,7 @@ export const HomeCourse: React.FC = () => {
                 <motion.button
                   whileHover={{ scale: 1.08 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-20 rounded-full w-fit  transition-colors duration-300"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 2xl:py-4 px-10 2xl:px-20 rounded-full w-fit  transition-colors duration-300"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
@@ -166,12 +163,12 @@ export const HomeCourse: React.FC = () => {
                 // initial={{ opacity: 0, x: 50 }}
                 // animate={{ opacity: 1, x: 0 }}
                 // transition={{ duration: 0.6, delay: 0.1 }}
-                className="flex items-center h-60 lg:h-96   justify-center lg:absolute bottom-0 right-5"
+                className="flex items-center h-60 lg:h-64 xl:h-64 2xl:h-96  justify-center lg:absolute bottom-0 right-5"
               >
                 <motion.img
                   src={selectedCourse.gameImage}
                   alt="Game Screenshot"
-                  className="w-fit right-0 bottom-0 absolute md:relative lg:w-full h-fit object-contain rounded-2xl"
+                  className="w-fit right-0 bottom-0 absolute md:relative lg:w-full h-full object-contain rounded-2xl"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 />

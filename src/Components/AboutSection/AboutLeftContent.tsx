@@ -19,16 +19,16 @@ const AboutLeftContent = ({ itemVariants }: AboutLeftContentProps) => {
         <div className="flex  flex-col items-start ">
           <Title
             title="About"
-            className="text-lg! sm:text-xl! md:text-2xl! lg:text-3xl! xl:text-4xl! 2xl:text-5xl! leading-tight!"
+            className="text-lg! sm:text-xl! md:text-2xl! lg:text-3xl! xl:text-3xl! 2xl:text-5xl! leading-tight!"
           />
           <Title
             title="The Upthrust Eduversity"
-            className="text-lg! sm:text-xl! md:text-2xl! lg:text-3xl! xl:text-4xl! 2xl:text-5xl! leading-tight!"
+            className="text-lg! sm:text-xl! md:text-2xl! lg:text-3xl! xl:text-3xl! 2xl:text-5xl! leading-tight!"
           />
         </div>
-        <div className="md:w-full  space-y-2 md:space-y-6 lg:w-4/5">
+        <div className="md:w-full  space-y-2 md:space-y-6 lg:w-4/5 xl:w-[90%] 2xl:w-4/5">
           <motion.p
-            className="text-[#121212] text-sm md:text-base lg:text-lg  xl:text-xl  2xl:text-2xl font-light     font-alexandria lg:leading-6 xl:leading-6  2xl:leading-9!"
+            className="text-[#121212]  text-xs md:text-sm lg:text-base  xl:text-base  2xl:text-2xl font-light     font-alexandria lg:leading-6 xl:leading-5  2xl:leading-9!"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -43,7 +43,7 @@ const AboutLeftContent = ({ itemVariants }: AboutLeftContentProps) => {
             students real-world, employable skills.
           </motion.p>
           <motion.p
-            className="text-[#121212] text-sm md:text-base lg:text-lg  xl:text-xl  2xl:text-2xl font-light   text-justify  font-alexandria lg:leading-6 xl:leading-6  2xl:leading-9!"
+            className="text-[#121212] text-xs md:text-sm lg:text-base  xl:text-base  2xl:text-2xl font-light   text-start  font-alexandria lg:leading-6 xl:leading-5  2xl:leading-9!"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
