@@ -4,12 +4,12 @@ import user3 from '../assets/images/cards/user3.png'
 
 export const SUBSCRIBE_DATA = {
   heading: "Grow, Improve",
-  subheading: "Every week on your Inbox with new tips.",
+  subheading: "Let’s Build the Future Together",
   placeholder: "Enter Your Email Address",
-  buttonText: "SUBSCRIBE NOW",
+  buttonText: "Contact Now",
   stats: {
     count: "25K",
-    label: "Student have already subscribed",
+    label: "If you want to introduce The Upthrust Eduversity courses in your campus, we’d be happy to collaborate. Our team will design a customized training plan that aligns with your students’ needs.",
     avatars: [user1, user2, user3],
   },
 }
