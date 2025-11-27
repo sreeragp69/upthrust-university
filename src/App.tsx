@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { ScrollToTop } from './Components/common/ScrollToTop';
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import AppLayout from './Components/layout/AppLayout';
+import Home from './pages/Home';
 
 interface ProtectedRouteProps {
   allowedRoles: string[];
@@ -62,7 +63,7 @@ const App = () => {
           {/* Protected Routes */}
           <Route element={<ProtectedRoute allowedRoles={[]} />}>
             <Route element={<AppLayout />}>
-              <Route path="/" element={<div>Home</div>} />
+              <Route path="/" element={<Home />} />
             </Route>
           </Route>
 

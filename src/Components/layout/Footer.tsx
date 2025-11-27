@@ -58,7 +58,7 @@ const AppFooter: React.FC<FooterProps> = ({ isLoading = false }) => {
       <div className="h-70 md:h-85 lg:h-52"></div>
       <div
         id="contact-us"
-        className="px-4  w-full  lg:pt-[200px] xl:pt-[250px]  bg-white py-6 sm:py-8 md:py-10 lg:py-16 relative"
+        className="px-4  md:px-0 w-full  lg:pt-[200px] xl:pt-[250px]  bg-white py-6 sm:py-8 md:py-10 lg:py-16 relative"
       >
         <Subscribe />
         <motion.footer
@@ -67,7 +67,7 @@ const AppFooter: React.FC<FooterProps> = ({ isLoading = false }) => {
           transition={{ duration: 0.6 }}
           className="mt-72 sm:mt-80  md:mt-89 lg:mt-0"
         >
-          <div className="mx-auto  px-3 sm:px-4 md:px-6 lg:px-8  max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) grid grid-cols-1 xl:grid-cols-12 gap-6 md:gap-8">
+          <div className="mx-auto   max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) grid grid-cols-1 xl:grid-cols-12 gap-6 md:gap-8">
             <div className="xl:col-span-9 w-full">
               {/* Header */}
               <motion.div
