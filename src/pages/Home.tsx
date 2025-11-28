@@ -7,10 +7,11 @@ import CollabSection from "../Components/home/CollabSection";
 import SalarySection from "../Components/home/SalarySection";
 const Home = () => {
   return (
-    <div className="px-8">
+    <div className="">
       <HomeCourse />
       <AboutSection />
       <VideoSection />
+      
       <SalarySection />
       <SuccessStory />
       <CollabSection />
