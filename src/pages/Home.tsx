@@ -5,10 +5,15 @@ import SuccessStory from "../Components/home/SuccessStory";
 import VideoSection from "../Components/home/VideoSection";
 import CollabSection from "../Components/home/CollabSection";
 import SalarySection from "../Components/home/SalarySection";
+import HeroSection from "../Components/home/HeroSection";
+import ProgramBenefitsSection from "../Components/home/ProgramBenefitsSection";
 const Home = () => {
   return (
     <div className="">
       <HomeCourse />
+
+      <HeroSection />
+      <ProgramBenefitsSection />
       <AboutSection />
       <VideoSection />
       
