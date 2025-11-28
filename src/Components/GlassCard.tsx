@@ -14,7 +14,7 @@ export default function CardWrapper({
   return (
     <motion.div
       // ref={modalRef}
-      className={` relative w-full! h-full! glass-card  rounded-3xl overflow-hidden shadow-2xl ${className}`}
+      className={` relative xl:w-full! h-full! glass-card  rounded-3xl overflow-hidden shadow-2xl ${className}`}
       initial={{ opacity: 0, scale: 0.9, y: 50 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{

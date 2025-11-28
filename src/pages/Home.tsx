@@ -9,20 +9,40 @@ import HeroSection from "../Components/home/HeroSection";
 import ProgramBenefitsSection from "../Components/home/ProgramBenefitsSection";
 import CampusSection from "../Components/home/CampusSection";
 import HowItWorks from "../Components/home/HowItWorks";
+import BreackPointWrapper from "../Components/common/BreackPointWrapper";
 const Home = () => {
   return (
     <div className="">
       {/* <HeroSection /> */}
-      <HomeCourse />
 
-      <AboutSection />
-      <ProgramBenefitsSection />
+      <BreackPointWrapper>
+        <HomeCourse />
+      </BreackPointWrapper>
+      <BreackPointWrapper>
+        <AboutSection />
+      </BreackPointWrapper>
+      <BreackPointWrapper>
+        <ProgramBenefitsSection />
+      </BreackPointWrapper>
+
       <VideoSection />
+
       <SalarySection />
-      <SuccessStory />
-      <HowItWorks />
+
+      <BreackPointWrapper>
+        <SuccessStory />
+      </BreackPointWrapper>
+
+      <BreackPointWrapper>
+        <HowItWorks />
+      </BreackPointWrapper>
+
       <CampusSection />
-      <CollabSection />
+
+      <BreackPointWrapper>
+        <CollabSection />
+      </BreackPointWrapper>
+
       <CentreSection />
     </div>
   );

@@ -19,13 +19,15 @@ const VideoSection = () => {
   return (
     <motion.section
       id="about-us"
-      className="mx-auto w-full  xl:px-36 2xl:px-48 py-8 xs:py-10 px-3 lg:px-3 sm:py-12 md:py-16 lg:py-20 overflow-hidden"
+      className="mx-auto w-full  xl:px-36 2xl:px-48 py-8 xs:py-10 px-3 lg:px-3 sm:py-12 md:py-16 lg:py-20 overflow-hidden bg-white"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       variants={containerVariants}
     >
-      <div className="flex flex-col gap-4 items-center justify-center">
+     
+    <div className="max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) mx-auto">
+    <div className="flex flex-col gap-4 items-center justify-center">
         <Title
           title="Videos for Student Learning and Information"
           className="text-center xl:w-[60%] 2xl:w-[90%] xl:leading-16"
@@ -46,6 +48,7 @@ const VideoSection = () => {
           className="w-full h-full object-cover  rounded-2xl"
         />
       </motion.div>
+    </div>
     </motion.section>
   );
 };

@@ -12,10 +12,11 @@ import MobileSidebar from "./MobileSidebar";
 //   useBreakPoint,
 // } from "../context/BreakPointContext";
 import AppFooter from "./Footer";
+import { BreakPointProvider, useBreakPoint } from "../context/BreackPointContext";
 
 const LayoutContent: React.FC = () => {
   const { isMobileOpen, setIsMobileOpen } = useSidebar();
-//   const { useBreakpoints } = useBreakPoint(); // 👈 consume context
+  const { useBreakpoints } = useBreakPoint(); // 👈 consume context
 
   return (
     <div className="min-h-screen flex">
@@ -33,7 +34,11 @@ const LayoutContent: React.FC = () => {
 
         {/* 🔹 Conditional breakpoints */}
         <div
-          className={` mx-auto   md:px-0   max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl)`}
+          className={` mx-auto ${
+            useBreakpoints
+              ? ""
+              : "  max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl)"
+          }`}
         >
           <Outlet />
         </div>
@@ -47,9 +52,9 @@ const LayoutContent: React.FC = () => {
 
 const AppLayout: React.FC = () => (
   <SidebarProvider>
-    {/* <BreakPointProvider> */}
+    <BreakPointProvider>
       <LayoutContent />
-    {/* </BreakPointProvider> */}
+    </BreakPointProvider>
   </SidebarProvider>
 );
 

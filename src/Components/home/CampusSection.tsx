@@ -72,14 +72,15 @@ const CampusSection = () => {
       topGradient={true}
       bottomGradient={true}
       image={CampusImage}
-      className="mx-auto w-full  py-8 xs:py-10 px-3 lg:px-3 sm:py-12 md:py-16 lg:py-20 overflow-hidden"
+      className="mx-auto w-full  py-8 xs:py-10 px-3 lg:px-3 sm:py-12 md:py-16 lg:py-20 overflow-hidden "
     >
-      <motion.div
+    <div className="max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) mx-auto">
+    <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
-        className="flex flex-col items-center justify-center"
+        className="flex flex-col items-center justify-center "
       >
         {/* Heading Section */}
         <motion.div
@@ -140,6 +141,7 @@ const CampusSection = () => {
           ))}
         </motion.div>
       </motion.div>
+    </div>
     </GradientWrapper>
   );
 };

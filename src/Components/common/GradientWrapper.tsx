@@ -23,7 +23,7 @@ const GradientWrapper = ({
   return (
     <div
       className={clsx(
-        "relative w-full min-h-screen overflow-hidden",
+        "relative w-full  overflow-hidden",
         className
       )}
     >
