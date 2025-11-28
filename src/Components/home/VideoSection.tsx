@@ -28,7 +28,7 @@ const VideoSection = () => {
       <div className="flex flex-col gap-4 items-center justify-center">
         <Title
           title="Videos for Student Learning and Information"
-          className="text-center xl:w-[60%] 2xl:w-[90%]"
+          className="text-center xl:w-[60%] 2xl:w-[90%] xl:leading-16"
         />
 
         <Desc

@@ -160,3 +160,16 @@ body::-webkit-scrollbar {
   position: relative;
   overflow: hidden;
 }
+
+.text-stroke {
+  color: transparent;
+  text-shadow:
+    -1px  0   0 #ffffff,
+     -2px  0   0 #143048,
+     0   -1px  0 #143048,
+     0   1px  0 #143048,
+    -1px -1px  0 #143048,
+     1px -1px  0 #143048,
+    -2px  1px  0 #143048,
+     1px  1px  0 #143048;
+}

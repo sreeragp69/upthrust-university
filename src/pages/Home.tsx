@@ -7,18 +7,21 @@ import CollabSection from "../Components/home/CollabSection";
 import SalarySection from "../Components/home/SalarySection";
 import HeroSection from "../Components/home/HeroSection";
 import ProgramBenefitsSection from "../Components/home/ProgramBenefitsSection";
+import CampusSection from "../Components/home/CampusSection";
+import HowItWorks from "../Components/home/HowItWorks";
 const Home = () => {
   return (
     <div className="">
-      <HeroSection />
+      {/* <HeroSection /> */}
       <HomeCourse />
 
-      <ProgramBenefitsSection />
       <AboutSection />
+      <ProgramBenefitsSection />
       <VideoSection />
-      
       <SalarySection />
       <SuccessStory />
+      <HowItWorks />
+      <CampusSection />
       <CollabSection />
       <CentreSection />
     </div>

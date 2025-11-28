@@ -1,43 +1,50 @@
 import { motion } from "framer-motion";
 import Title from "../common/Title";
-import Desc from "../common/Desc";
 import img1 from "../../assets/icon/img1.png";
 import img2 from "../../assets/icon/img2.png";
 import img3 from "../../assets/icon/img3.png";
 import img4 from "../../assets/icon/img4.png";
 import img5 from "../../assets/icon/img5.png";
+import img6 from "../../assets/icon/img6.png";
 import collabMan from "../../assets/images/home/collabMan.png";
 
 const data = [
   {
     id: 1,
-    imgae:   img1,
+    imgae: img1,
     description:
       "Industry-aligned curriculum integrated directly into college programs",
   },
   {
     id: 2,
-    imgae:   img2,
+    imgae: img2,
     description: "Hands-on training through workshops, projects, and seminars",
   },
   {
     id: 3,
-    imgae:   img3,
+    imgae: img3,
+    description:
+      "Guidance from experienced mentors, trainers, and industry experts",
+  },
+  {
+    id:4,
+    imgae: img4,
     description:
       "Enhanced creativity, critical thinking, and problem-solving abilities",
   },
   {
-    id: 4,
-    imgae:   img4,
+    id: 5,
+    imgae: img5,
     description:
       "Strong student portfolios that improve placement opportunities",
   },
-  {
-    id: 5,
-    imgae:   img5,
-    description:
-      "A collaborative ecosystem that benefits students, faculty, and the institution",
-  },
+    {
+      id: 6,
+      imgae: img6,
+      description:
+        "A collaborative ecosystem that benefits students, faculty, and the institution",
+    },
+  
 ];
 
 const CollabSection = () => {
@@ -62,24 +69,24 @@ const CollabSection = () => {
       viewport={{ once: true, margin: "-50px" }}
       variants={containerVariants}
     >
-      <div className="flex flex-col gap-4 items-center justify-center">
+      <div className="flex flex-col gap-4 items-center justify-center mt-2 xl:mb-20 mb-10">
         <Title
           title="Why Collaboration With Us?"
           className="text-center xl:w-[60%] 2xl:w-[90%]"
         />
       </div>
       <motion.div
-        className=" mx-auto  lg:mt-10   py-5  grid grid-cols-1 lg:grid-cols-7 gap-4 "
+        className=" mx-auto  lg:mt-10   py-5  grid grid-cols-1 lg:grid-cols-7 gap-4  items-center "
         variants={containerVariants}
       >
         <motion.p
-          className="text-[#121212] col-span-3  text-xs md:text-sm lg:text-base  xl:text-base  2xl:text-2xl font-light     font-alexandria lg:leading-6 xl:leading-5  2xl:leading-9!"
+          className="text-[#585D69] col-span-3  text-center lg:text-left text-xs md:text-sm lg:text-base  xl:text-base  2xl:text-xl 3xl:text-2xl font-normal     font-alexandria lg:leading-6 xl:leading-6  2xl:leading-11"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           By working with us, you can provide{" "}
-          <span className="font-bold text-themePrimary">
+          <span className="font-normal   text-themePrimary">
             your students with industry-focused learning, innovation, and
             knowledge.
           </span>{" "}
@@ -91,27 +98,34 @@ const CollabSection = () => {
           out talented individuals.
         </motion.p>
 
-        <div className="bg-[#E2ECFF]  p-6 xl:rounded-3xl 2xl:rounded-4xl relative col-span-4">
-          <Title
-            title="The Upthrust Eduversity"
-            className="text-start! text-base! sm:text-base! md:text-lg! lg:text-xl! xl:text-2xl! 2xl:text-3xl! leading-tight!"
-          />
+        <div className="bg-[#E2ECFF]  p-6 xl:p-10 2xl:p-12 rounded-2xl xl:rounded-3xl 2xl:rounded-4xl relative col-span-4 mt-6  lg:mt-0">
+          <div className="w-[70%]">
+            <Title
+              title="What This Partnership Brings to Your Campus"
+              className="text-start! text-base! sm:text-base! md:text-lg! lg:text-lg! xl:text-2xl! 2xl:text-3xl! 3xl:text-4xl!  leading-tight! "
+            />
 
-          <div className="flex flex-col gap-3 mt-6 w-[60%]">
-            {data.map((item) => (
-              <div key={item.id} className="flex items-start gap-2">
-                <img
-                  src={item.imgae}
-                  alt={item.description}
-                  className="w-3.5 h-3.5 mt-1"
-                />
-                <p className="text-start! text-sm! sm:text-sm! md:text-base! lg:text-lg! xl:text-sm! 2xl:text-base! leading-tight! font-semibold font-alexandria">{item.description}</p>
-              </div>
-            ))}
+            <div className="flex flex-col gap-3 xl:gap-4 2xl:gap-5 mt-10 ">
+              {data.map((item) => (
+                <div key={item.id} className="flex items-start gap-4 2xl:gap-6">
+                  <img
+                    src={item.imgae}
+                    alt={item.description}
+                    className="w-3.5 h-3.5 2xl:w-5 2xl:h-5 mt-1"
+                  />
+                  <p className="text-start! text-[#19213D] text-sm! sm:text-sm! md:text-base! lg:text-base! xl:text-xl! 2xl:text-xl! 3xl:text-2xl leading-tight! font-medium font-alexandria">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
 
-
-          <img src={collabMan} alt="collabMan" className="absolute bottom-0 -right-10 w-1/2 " />
+          <img
+            src={collabMan}
+            alt="collabMan"
+            className="absolute bottom-0 right-0 lg:-right-10 w-[40%] lg:w-[40%]"
+          />
         </div>
       </motion.div>
     </motion.section>
