@@ -35,7 +35,7 @@ export default function HeroSection() {
             transition={{ delay: 0.4, duration: 0.7 }}
             className="mb-8 mt-8"
           >
-            <p className="text-gray-600 text-xl xl:text-2xl font-light leading-tight mb-2 2xl:absolute max-w-xs xl:max-w-lg 3xl:-right-16 2xl:-right-40 4xl:-right-10 bottom-10 font-alexandria">
+            <p className="text-gray-600 text-xl xl:text-2xl font-light leading-tight mb-2 2xl:absolute max-w-xs xl:max-w-lg 3xl:-right-28 2xl:-right-40 4xl:-right-20 bottom-10 font-alexandria">
               The main goal of{" "}
               <span className="font-medium text-blue-600">
                 The Upthrust Eduversity

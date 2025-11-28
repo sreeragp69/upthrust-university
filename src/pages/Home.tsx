@@ -13,7 +13,9 @@ import BreackPointWrapper from "../Components/common/BreackPointWrapper";
 const Home = () => {
   return (
     <div className="">
-      {/* <HeroSection /> */}
+      <BreackPointWrapper>
+        <HeroSection />
+      </BreackPointWrapper>
 
       <BreackPointWrapper>
         <HomeCourse />
