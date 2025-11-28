@@ -80,7 +80,7 @@ export default function HowItWorksCard({
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <span className="text-8xl text-outline   sm:text-5xl  md:text-6xl lg:text-7xl xl:text-9xl font-bold text-stroke  text-outline-2">
+          <span className="text-8xl text-outline   sm:text-5xl  md:text-6xl lg:text-7xl xl:text-9xl font-bold text-stroke">
             {number}
           </span>
         </motion.div>

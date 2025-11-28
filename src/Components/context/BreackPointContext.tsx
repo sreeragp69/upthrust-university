@@ -19,12 +19,7 @@ export const BreakPointProvider: React.FC<{ children: React.ReactNode }> = ({
   useEffect(() => {
     // Define routes where breakpoints should be applied
     const breakpointRoutes = [
-      "/blog/:id",
-      "/course",
-      "/events",
-      "/career",
-      "/about-us",
-      "/contact-us",
+      "/",
     ];
 
     const shouldUseBreakpoints = breakpointRoutes.some((route) =>
