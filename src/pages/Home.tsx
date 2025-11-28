@@ -10,9 +10,9 @@ import ProgramBenefitsSection from "../Components/home/ProgramBenefitsSection";
 const Home = () => {
   return (
     <div className="">
+      <HeroSection />
       <HomeCourse />
 
-      <HeroSection />
       <ProgramBenefitsSection />
       <AboutSection />
       <VideoSection />
