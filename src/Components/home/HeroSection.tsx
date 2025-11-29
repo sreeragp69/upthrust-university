@@ -33,7 +33,7 @@ export default function HeroSection() {
             
             className="mb-8 mt-8 xl:mb-1 xl:mt-1 2xl:mb-8 2xl:mt-8"
           >
-            <p className="text-gray-600 text-xl xl:text-base 2xl:text-2xl font-light leading-tight mb-2 xl:absolute max-w-xs xl:max-w-84 2xl:max-w-lg xl:right-12 3xl:-right-28 2xl:-right-40 4xl:-right-20 bottom-10 xl:bottom-4 2xl:bottom-10  font-alexandria">
+            <p className="text-gray-600 text-xl xl:text-base 2xl:text-2xl font-light leading-tight mb-2 xl:absolute max-w-xs lg:max-w-full xl:max-w-84 2xl:max-w-lg xl:right-12 3xl:-right-28 2xl:-right-20 4xl:-right-20 bottom-10 xl:bottom-4 2xl:bottom-10  font-alexandria">
               The main goal of{" "}
               <span className="font-medium text-blue-600">
                 The Upthrust Eduversity

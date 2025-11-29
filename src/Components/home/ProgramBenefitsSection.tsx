@@ -3,13 +3,13 @@ import benefitStudent from "../../assets/images/programbenefit/benefitStudent.pn
 
 export default function ProgramBenefitsSection() {
   return (
-    <section className="bg-linear-to-b from-purple-50 to-white py-12 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+    <section className=" py-12 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div className=" mx-auto">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16 lg:mb-20">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-4xl 2xl:text-5xl font-bold text-gray-900 mb-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-5xl font-bold text-gray-900 mb-2">
             How does our Cutting-Edge Program{" "} <br />
-            <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-4xl 2xl:text-5xl font-bold text-blue-600">
+            <span className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-4xl 2xl:text-5xl font-bold text-blue-600">
               {" "}
               Benefit Students?
             </span>
@@ -49,7 +49,7 @@ export default function ProgramBenefitsSection() {
           {/* Right - Benefits */}
           <div className="md:col-span-3 space-y-6 font-alexandria">
             <div>
-              <h3 className="text-lg md:text-xl lg:text-4xl xl:text-3xl 2xl:text-4xl font-bold text-gray-900 mb-4 md:mb-6 uppercase tracking-wide">
+              <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-gray-900 mb-4 md:mb-6 uppercase tracking-wide">
                 While Industry Advice <br /> Helps Students
               </h3>
             </div>

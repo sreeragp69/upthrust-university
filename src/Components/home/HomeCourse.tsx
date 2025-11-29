@@ -115,7 +115,7 @@ export const HomeCourse: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className={`${selectedCourse.cardBgColor} relative rounded-3xl overflow-hidden`}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 xl:grid-cols-12 xl:gap-x-8  p-6 md:p-10 lg:p-12 xl:p-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 xl:grid-cols-12 lg:gap-x-8  p-6 md:p-10 lg:p-6 xl:p-6">
             {/* Left Image */}
             
             <motion.div
@@ -126,7 +126,7 @@ export const HomeCourse: React.FC = () => {
               <motion.img
                 src={selectedCourse.image}
                 alt="Game Developer"
-                className="w-full h-96 xl:h-full 2xl:h-auto 2xl:min-h-100 object-contain rounded-2xl absolute -bottom-3 "
+                className="w-full h-96 lg:h-full 2xl:h-auto 2xl:min-h-100 object-contain rounded-2xl absolute -bottom-3 "
               />
             </motion.div>
 
@@ -136,11 +136,11 @@ export const HomeCourse: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="flex flex-col  gap-8 xl:col-span-7 relative "
+              className="flex flex-col  gap-8 lg:col-span-7 relative "
             >
               <div>
                 <motion.h2
-                   className="text-xl md:text-2xl lg:text-2xl 2xl:text-5xl  text-black mb-1 xl:mb-0 font-bold font-montserrat"
+                   className="text-xl md:text-2xl lg:text-2xl 2xl:text-3xl 3xl:text-5xl  text-black mb-1 xl:mb-0 font-bold font-montserrat"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
@@ -184,7 +184,7 @@ export const HomeCourse: React.FC = () => {
                 // initial={{ opacity: 0, x: 50 }}
                 // animate={{ opacity: 1, x: 0 }}
                 // transition={{ duration: 0.6, delay: 0.1 }}
-                className="flex items-center h-28 md:h-30  xl:h-full justify-center  bottom-0 right-5 relative"
+                className="flex items-center h-28 md:h-30 lg:h-full  xl:h-full justify-center  bottom-0 right-5 relative"
               >
                 <motion.img
                   src={selectedCourse.gameImage}

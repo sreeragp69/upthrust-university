@@ -38,15 +38,15 @@ export default function SubscriptionForm({ display }: Props) {
     >
       <motion.button
      
-        className="w-fit bg-yellow-400  text-black text-lg xl:text-[10px] 2xl:text-lg rounded-b-3xl rounded-bl-none rounded-tr-none py-2 px-6 rounded-2xl roun mb-5 transition-colors absolute top-0 left-0"
+        className="w-fit bg-yellow-400  text-black text-lg xl:text-[10px] 2xl:text-lg rounded-b-3xl rounded-bl-none rounded-tr-none py-2 px-6 rounded-2xl roun mb-5  transition-colors absolute top-0 left-0"
       >
         Get More Info & New Updates
       </motion.button>
 
       {/* Label */}
-      <h3 className="text-black text-lg xl:text-[10px] 2xl:text-lg  mb-4 xl:mb-1 2xl:mb-4 xl:pl-3.5">Enter Your Email ID</h3>
+      <h3 className="text-black text-lg xl:text-[10px] 2xl:text-lg  mb-4 xl:mb-1 2xl:mb-4 xl:pl-3.5 lg:mt-6">Enter Your Email ID</h3>
 
-      <form onSubmit={handleSubmit} className="flex gap-4">
+      <form onSubmit={handleSubmit} className="flex gap-4 md:flex-row flex-col">
         <input
           type="email"
           placeholder="Enter Your Email ID"
@@ -60,7 +60,7 @@ export default function SubscriptionForm({ display }: Props) {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           type="submit"
-          className="bg-blue-600 hover:bg-blue-700 text-white xl:font-light xl:text-[10px] text-base xl:py-2.5 xl:px-4  2xl:py-3 2xl:px-8 rounded-full transition-colors whitespace-nowrap"
+          className="bg-blue-600 hover:bg-blue-700 text-white xl:font-light xl:text-[10px] text-base py-2.5 lg:px-2  xl:py-2.5 xl:px-4  2xl:py-3 2xl:px-8 rounded-full transition-colors whitespace-nowrap"
         >
           {isSubmitted ? "✓ Subscribed!" : "Subscribe Now"}
         </motion.button>

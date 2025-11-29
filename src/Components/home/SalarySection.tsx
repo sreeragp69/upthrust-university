@@ -22,7 +22,7 @@ const SalarySection = () => {
 
       <div className="max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) mx-auto px-10">
         {/* Main content container */}
-        <div className="relative  w-full  mx-auto py-6">
+        <div className="relative  w-full  mx-auto py-6 lg:py-10">
           {/* Title */}
           <div className=" lg:w-1/2 mx-auto">
             <Title
@@ -35,22 +35,22 @@ const SalarySection = () => {
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 mt-6 xl:mt-16 2xl:mt-20">
             {/* Left Card - Text Content */}
             <div className=" text-white relative flex flex-col gap-6 z-10 xl:min-h-[400px] md:min-h-auto md:p-6 xl:pr-0">
-              <p className="text-white text-xs md:text-sm lg:text-sm  xl:text-base  2xl:text-2xl font-light   text-center lg:text-start  font-alexandria lg:leading-6 xl:leading-5  2xl:leading-9!">
+              <p className="text-white text-xs md:text-sm lg:text-sm  xl:text-base 2xl:text-xl 3xl:text-2xl font-light   text-center xl:text-start  font-alexandria lg:leading-6 xl:leading-5  2xl:leading-9!">
                 Our programs are structured to produce quantifiable results, and
                 graduates can confidently enter lucrative positions in the
                 gaming sector. With competitive offers ranging from{" "}
-                <span className=" font-medium uppercase text-xs md:text-sm lg:text-xs  xl:text-sm  2xl:text-2xl text-[#FABB1E] font-alexandria">
+                <span className=" font-medium uppercase text-xs md:text-sm lg:text-xs  xl:text-sm  2xl:text-xl 3xl:text-2xl text-[#FABB1E] font-alexandria">
                   6 LPA to 22 LPA
                 </span>
                 , alumni have landed{" "}
-                <span className=" font-medium text-xs md:text-sm lg:text-xs  xl:text-sm  2xl:text-2xl uppercase text-[#FC4AFF] font-alexandria">
+                <span className=" font-medium text-xs md:text-sm lg:text-xs  xl:text-sm  2xl:text-xl 3xl:text-2xl uppercase text-[#FC4AFF] font-alexandria">
                   Jobs as VR/AR Game Developers, Unity and Unreal Developers,
                   Game Designers, NFT and Web 3.0 Game Developers, and 3D
                   Artists.
                 </span>{" "}
               </p>
 
-              <p className="text-white text-xs md:text-sm lg:text-sm  xl:text-base  2xl:text-2xl font-light  text-center lg:text-start   font-alexandria lg:leading-6 xl:leading-6  2xl:leading-9!">
+              <p className="text-white text-xs md:text-sm lg:text-sm  xl:text-base  2xl:text-2xl font-light  text-center xl:text-start   font-alexandria lg:leading-6 xl:leading-6  2xl:leading-9!">
                 The success of our practical, industry-focused approach is
                 reflected in these wage trends and student accomplishments,
                 which show how hands-on learning leads to fulfilling employment
@@ -58,66 +58,12 @@ const SalarySection = () => {
               </p>
             </div>
 
-            {/* Middle Card - Jobs Number */}
-            <div className="z-20 relative max-h-[93%] lg:max-h-[100%]  xl:max-h-[93%] md:w-[70%] mx-auto xl:w-full! backdrop-blur-xl rounded-4xl bg-linear-to-t from-[#363636]/30 to-[#D9D9D9]/20 border border-white/50 shadow-lg flex flex-col items-center justify-center  p-10 xl:p-0">
-              <div className="flex flex-col items-center gap-10  2xl:gap-32 lg:px-16 ">
-                <h3 className=" text-white font-semibold text-3xl  md:text-lg lg:text-lg xl:text-2xl 2xl:text-4xl leading-9 text-center">
-                  Experience Level of Gaming Jobs <br /> in 2025
-                </h3>
+            <div className="col-span-1 lg:col-span-2 flex gap-6 flex-col! lg:scale-75 xl:scale-100">
+              <FIrstCard />
 
-                <div>
-                  <p className="text-white font-semibold text-lg md:text-lg lg:text-lg xl:text-2xl 2xl:text-3xl leading-9 text-center">
-                    <span className="bg-[#FABB1E] text-black font-bold text-xl p-1  md:text-lg lg:text-lg xl:text-2xl 2xl:text-3xl leading-9 text-center rounded-lg lg:p-0.5">
-                      JOBS
-                    </span>{" "}
-                    Available in <br /> this Sector Currently
-                  </p>
-
-                  <p className="text-stroke-1 text-center  text-6xl lg:text-5xl ">
-                    109,000
-                  </p>
-                </div>
-              </div>
+              <SecondCard />
             </div>
 
-            {/* Right Card - Salary Table */}
-            <GlassCard className="relative pt-10 xl:pt-5 pb-8 px-4 xl:pb-12 2xl:pb-8 xl:max-h-[93%] h-fit w-[100%]! lg:w-[70%]! mx-auto xl:w-full! z-20">
-              <h3 className="text-2xl xl:text-base 2xl:text-2xl font-semibold text-white mb-6 xl:mb-3 2xl:mb-6 text-center font-nunito">
-                <span className=" font-medium  text-[#FABB1E] font-alexandria">
-                  {" "}
-                  Salary{" "}
-                </span>
-                Packages for Freshers in India
-              </h3>
-
-              <div className="flex flex-col border border-white/20 border-t-white/10 rounded-2xl shadow-[inset_0_4px_8px_rgba(0,0,0,0.3)]">
-                {salaryData.map((item, index) => {
-                  const isLast = index === salaryData.length - 1;
-
-                  return (
-                    <div
-                      key={index}
-                      className={`flex justify-between px-4 py-3.5 xl:py-2 font-bold font-nunito
-                    ${
-                      !isLast
-                        ? index % 2 === 0
-                          ? "bg-white/1"
-                          : "bg-white/[0.03]"
-                        : ""
-                    }
-                  `}
-                    >
-                      <div className="text-xs md:text-sm lg:text-sm  xl:text-xs  2xl:text-2xl  font-bold text-white">
-                        {item.role}
-                      </div>
-                      <div className="text-xs md:text-sm lg:text-sm  xl:text-[10px]  2xl:text-2xl text-white">
-                        {item.range}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </GlassCard>
             <div className="absolute   w-[800px] h-[800px]  xl:w-[1000px] xl:h-[1000px] 2xl:w-[1200px] 2xl:h-[1200px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-40 blur-[40px] animate-salary-float pointer-events-none z-0 md:w-[600px] md:h-[600px]">
               <img
                 src={ChartsImage}
@@ -129,6 +75,79 @@ const SalarySection = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+const FIrstCard = () => {
+  return (
+    <div className="z-20 relative max-h-[93%] lg:max-h-[100%]  xl:max-h-[93%] 2xl:max-h-[60%] 3xl:max-h-[93%] md:w-[70%] mx-auto xl:w-full! backdrop-blur-xl rounded-4xl bg-linear-to-t from-[#363636]/30 to-[#D9D9D9]/20 border border-white/50 shadow-lg flex flex-col items-center justify-center  p-10 xl:p-0">
+      <div className="flex flex-col items-center gap-10  3xl:gap-32 xl:px-16 ">
+        <h3 className=" text-white font-semibold text-3xl  md:text-lg lg:text-5xl xl:text-2xl 3xl:text-4xl leading-9 text-center">
+          Experience Level of Gaming Jobs <br /> in 2025
+        </h3>
+
+        <div>
+          <p className="text-white font-semibold text-lg md:text-lg lg:text-3xl xl:text-2xl 3xl:text-3xl leading-9 text-center">
+            <span className="bg-[#FABB1E] text-black font-bold text-xl p-1  md:text-lg lg:text-2xl xl:text-2xl 3xl:text-3xl leading-9 text-center rounded-lg lg:p-0.5">
+              JOBS
+            </span>{" "}
+            Available in <br /> this Sector Currently
+          </p>
+
+          <p className="text-stroke-1 text-center  text-6xl lg:text-5xl ">
+            109,000
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const SecondCard = () => {
+  const salaryData = [
+    { role: "Junior Programmer", range: "₹3 LPA - ₹5 LPA" },
+    { role: "Game Developer (2D/3D)", range: "₹3.3 LPA - ₹6 LPA" },
+    { role: "Game Designer", range: "₹3.5 LPA - ₹6.5 LPA" },
+    { role: "Digital Artist", range: "₹3 LPA - ₹5.5 LPA" },
+    { role: "Junior 3D Modeler and Animator", range: "₹3 LPA - ₹5 LPA" },
+    { role: "Multiplayer Integration Specialist", range: "₹3.5 LPA - ₹6 LPA" },
+    { role: "AR/VR/XR Developer", range: "₹4 LPA - ₹7 LPA" },
+    { role: "Game QA Tester", range: "₹2.5 LPA - ₹4.5 LPA" },
+    { role: "Game Monetization Strategist", range: "₹3.5 LPA - ₹6 LPA" },
+    { role: "Metaverse Specialist", range: "₹4 LPA - ₹7 LPA" },
+  ];
+  return (
+    <GlassCard className="relative pt-10 xl:pt-5 pb-8 px-4 xl:pb-12 2xl:pb-8 xl:max-h-[93%] 2xl:max-h-[60%] 3xl:max-h-[93%] h-fit w-[100%]! lg:w-[70%]! mx-auto xl:w-full! z-20 ">
+      <h3 className="text-2xl xl:text-base 3xl:text-2xl font-semibold text-white mb-6 xl:mb-3 2xl:mb-6 text-center font-nunito">
+        <span className=" font-medium  text-[#FABB1E] font-alexandria">
+          {" "}
+          Salary{" "}
+        </span>
+        Packages for Freshers in India
+      </h3>
+
+      <div className="flex flex-col border border-white/20 border-t-white/10 rounded-2xl shadow-[inset_0_4px_8px_rgba(0,0,0,0.3)]">
+        {salaryData.map((item, index) => {
+          const isLast = index === salaryData.length - 1;
+
+          return (
+            <div
+              key={index}
+              className={`flex justify-between px-4 py-3.5 xl:py-2 font-bold font-nunito
+          ${!isLast ? (index % 2 === 0 ? "bg-white/1" : "bg-white/[0.03]") : ""}
+        `}
+            >
+              <div className="text-xs md:text-sm lg:text-sm  xl:text-xs 2x:text-sm 4xl:text-base font-bold text-white">
+                {item.role}
+              </div>
+              <div className="text-xs md:text-sm lg:text-sm  xl:text-[10px] 2x:text-sm 4xl:text-base text-white">
+                {item.range}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </GlassCard>
   );
 };
 

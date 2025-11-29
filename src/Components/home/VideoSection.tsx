@@ -43,7 +43,7 @@ const VideoSection = () => {
         viewport={{ once: true, margin: "-50px" }}
         variants={containerVariants}
       >
-        <div className="max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) mx-auto">
+        <div className="max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) mx-auto lg:px-10 px-5">
           <div className="flex flex-col gap-4 items-center justify-center">
             <Title
               title="Videos for Student Learning and Information"

@@ -4,13 +4,7 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Backdrop from "./Backdrop";
 import MobileSidebar from "./MobileSidebar";
-// import AppSidebar from "./AppSidebar";
-// import AppHeaderSkeleton from "../components/AppHeader/Skeletons/AppHeaderSkeleton";
-// import AppFooter from "./AppFooter";
-// import {
-//   BreakPointProvider,
-//   useBreakPoint,
-// } from "../context/BreakPointContext";
+
 import AppFooter from "./Footer";
 import { BreakPointProvider, useBreakPoint } from "../context/BreackPointContext";
 
@@ -20,7 +14,7 @@ const LayoutContent: React.FC = () => {
 
   return (
     <div className="min-h-screen flex">
-      {/* <AppSidebar /> */}
+      
 
       {/* Mobile Sidebar */}
       <MobileSidebar />

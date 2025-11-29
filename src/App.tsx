@@ -53,7 +53,7 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <ScrollToTop />
+        {/* <ScrollToTop /> */}
         <Routes>
           {/* Auth Routes */}
           {/* <Route path="/login" element={<Login />} />
