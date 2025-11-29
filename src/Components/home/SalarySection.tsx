@@ -27,7 +27,7 @@ const SalarySection = () => {
           <div className=" lg:w-1/2 mx-auto">
             <Title
               className="text-center text-white   2xl:leading-16!"
-              title="Graphs of Salaries, Student Achievement, and other"
+              title="Graphs of Salaries Student Achievement."
             />
           </div>
 
@@ -58,7 +58,7 @@ const SalarySection = () => {
               </p>
             </div>
 
-            <div className="col-span-1 lg:col-span-2 flex gap-6 flex-col! lg:scale-75 xl:scale-100">
+            <div className="col-span-1 lg:col-span-2 flex gap-6 flex-col lg:flex-row lg:scale-75 xl:scale-100">
               <FIrstCard />
 
               <SecondCard />
