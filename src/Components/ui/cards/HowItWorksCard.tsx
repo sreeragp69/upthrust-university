@@ -47,7 +47,7 @@ export default function HowItWorksCard({
     >
       {/* Image Container */}
       <motion.div
-        className={`relative w-full  xl:h-96 h-52 aspect-square md:mb-6 rounded-2xl overflow-hidden  lg:p-4 flex items-center justify-center  ${marginTopLg} `}
+        className={`relative w-full xl:h-50 2xl:h-96 h-52 aspect-square md:mb-6 rounded-2xl overflow-hidden  lg:p-4 xl:px-4 xl:pb-0 2xl:p-4 flex items-center justify-center  ${marginTopLg} `}
       >
    
         <img
@@ -62,7 +62,7 @@ export default function HowItWorksCard({
       <div className="flex gap-8 lg:gap-0 flex-row-reverse lg:flex-col items-center justify-center">
         {/* Title */}
         <motion.h3
-          className="text-2xl sm:text-2xl md:text-base lg:text-lg font-bold text-black uppercase xl:leading-4 leading-7 -mb-5 text-start lg:text-center"
+          className="text-2xl xl:text-sm 2xl:text-2xl md:text-base lg:text-lg font-bold text-black uppercase xl:leading-4 leading-7 -mb-5 text-start lg:text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -80,7 +80,7 @@ export default function HowItWorksCard({
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <span className="text-8xl text-outline   sm:text-5xl  md:text-6xl lg:text-7xl xl:text-9xl font-bold text-stroke">
+          <span className="text-8xl text-outline   sm:text-5xl  md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold text-stroke">
             {number}
           </span>
         </motion.div>

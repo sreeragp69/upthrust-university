@@ -7,35 +7,36 @@ export default function ProgramBenefitsSection() {
       <div className=" mx-auto">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16 lg:mb-20">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2">
-            How does our Cutting-Edge Program
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-4xl 2xl:text-5xl font-bold text-gray-900 mb-2">
+            How does our Cutting-Edge Program{" "} <br />
+            <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-4xl 2xl:text-5xl font-bold text-blue-600">
+              {" "}
+              Benefit Students?
+            </span>
           </h2>
-          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-600">
-            Benefit Students?
-          </p>
         </div>
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-7 gap-6 md:gap-8 lg:gap-12  items-center ">
           {/* Left - VR Image */}
-          <div className="md:col-span-4 flex justify-center md:justify-end bg-[#cfffd1] relative p-8 md:py-16 rounded-4xl">
+          <div className="md:col-span-4 flex justify-center md:justify-end bg-[#cfffd1] relative p-8 md:py-16 xl:py-10 2xl:py-16 rounded-4xl">
             <div className=" ">
               <img
                 src={personWearingHeadset}
                 alt="Person wearing VR headset"
-                className="lg:w-[30vw] lg:h-[55vh] rounded-2xl object-contain absolute hidden xl:block lg:bottom-0 xl:-bottom-10 2xl:bottom-0 lg:-left-16"
+                className="lg:w-[30vw] lg:h-[55vh] rounded-2xl object-contain absolute hidden xl:block lg:bottom-0 xl:bottom-0 2xl:bottom-0 lg:-left-16 xl:-left-10 2xl:-left-16"
               />
             </div>
             {/* Center - Description Text */}
-            <div className=" space-y-6 w-full xl:w-[55%] font-alexandria font-light"> 
-              <p className="text-base md:text-lg text-gray-700 leading-tight">
+            <div className=" space-y-6 w-full xl:w-[55%] font-alexandria font-light">
+              <p className="text-base md:text-lg xl:text-sm 2xl:text-base text-gray-800 leading-tight">
                 Our cutting-edge programs emphasize learning by doing rather
                 than merely imparting academic knowledge. Students acquire
                 practical skills that prepare them for the workforce right away
                 through practical projects, real-world simulations, and
                 industry-relevant technologies.
               </p>
-              <p className="text-base md:text-lg text-gray-700 leading-tight">
+              <p className="text-base md:text-lg xl:text-sm 2xl:text-base text-gray-700 leading-tight">
                 Our approach, in contrast to traditional programs, places a
                 strong emphasis on problem-solving, teamwork, and portfolio
                 development, enabling students to boldly take on real issues,
@@ -48,7 +49,7 @@ export default function ProgramBenefitsSection() {
           {/* Right - Benefits */}
           <div className="md:col-span-3 space-y-6 font-alexandria">
             <div>
-              <h3 className="text-lg md:text-xl lg:text-4xl font-bold text-gray-900 mb-4 md:mb-6 uppercase tracking-wide">
+              <h3 className="text-lg md:text-xl lg:text-4xl xl:text-3xl 2xl:text-4xl font-bold text-gray-900 mb-4 md:mb-6 uppercase tracking-wide">
                 While Industry Advice <br /> Helps Students
               </h3>
             </div>
@@ -57,7 +58,7 @@ export default function ProgramBenefitsSection() {
             <div className="space-y-4">
               {/* Benefit 1 */}
               <div className="flex gap-3 md:gap-4">
-                <div className="shrink-0 w-4 h-4 md:w-5 md:h-5 rounded-full bg-blue-500 mt-1.5 md:mt-2"></div>
+                <div className="shrink-0 w-4 h-4 md:w-5 xl:w-3 xl:h-3 2xl:w-5 md:h-5 rounded-full bg-blue-500 mt-1.5 md:mt-2"></div>
                 <p className="text-base md:text-lg xl:text-xl text-gray-800 leading-relaxed">
                   Close the gap between the classroom and the workplace
                 </p>
@@ -65,7 +66,7 @@ export default function ProgramBenefitsSection() {
 
               {/* Benefit 2 */}
               <div className="flex gap-3 md:gap-4">
-                <div className="shrink-0 w-4 h-4 md:w-5 md:h-5 rounded-full bg-pink-500 mt-1.5 md:mt-2"></div>
+                <div className="shrink-0 w-4 h-4 md:w-5 xl:w-3 xl:h-3 2xl:w-5 md:h-5 rounded-full bg-pink-500 mt-1.5 md:mt-2"></div>
                 <p className="text-base md:text-lg xl:text-xl text-gray-800 leading-relaxed">
                   Gain effective learning through innovative teaching strategies
                 </p>

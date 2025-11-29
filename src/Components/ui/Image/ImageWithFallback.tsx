@@ -23,7 +23,7 @@ const ImageWithFallback = ({
   const displaySrc = !src || hasError ? fallback : src;
 
   return (
-    <div className="relative w-full h-full overflow-hidden rounded-3xl lg:rounded-[40px] shadow-lg">
+    <div className="relative w-full h-full overflow-hidden rounded-3xl lg:rounded-[40px] xl:rounded-3xl   2xl:rounded-[40px]   shadow-lg">
       {/* Loader while loading */}
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse" />

@@ -30,10 +30,10 @@ export const CourseCard: React.FC<CourseCardProps> = ({
       <motion.div
        
         whileTap={{ scale: 0.68 }}
-        className={`${backgroundColor}  rounded-2xl md:rounded-4xl p-3 md:p-5 md:py-6 lg:p-8 lg:py-10 xl:py-8 2xl:py-16 cursor-pointer transition-all duration-300 h-full flex flex-col items-center justify-center text-center`}
+        className={`${backgroundColor}  rounded-2xl md:rounded-4xl xl:rounded-2xl p-3 md:p-5 md:py-6 lg:p-8 xl:p-6 lg:py-10 xl:py-8 2xl:py-16 cursor-pointer transition-all duration-300 h-full flex flex-col items-center justify-center text-center`}
       >
         <motion.h3
-          className="text-xl md:text-2xl lg:text-3xl 2xl:text-5xl  text-black mb-1 font-bold font-montserrat"
+          className="text-xl md:text-2xl lg:text-2xl 2xl:text-5xl  text-black mb-1 xl:mb-0 font-bold font-montserrat"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: index * 0.1 + 0.2 }}
@@ -41,7 +41,7 @@ export const CourseCard: React.FC<CourseCardProps> = ({
           {title}
         </motion.h3>
         <motion.p
-          className="text-sm md:text-base 2xl:text-lg text-gray-800 font-bold font-montserrat"
+          className="text-sm md:text-base xl:text-xs 2xl:text-lg text-gray-800 font-bold font-montserrat"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: index * 0.1 + 0.3 }}

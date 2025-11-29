@@ -18,7 +18,7 @@ const SuccessStoryLeft = ({ itemVariants }: SuccessStoryLeftProps) => {
         variants={itemVariants}
       >
         <div className="md:w-full  space-y-2 md:space-y-6 lg:w-4/5">
-          <span className="bg-themePrimary text-white shadow-theme-xs rounded-full inline-flex font-alexandria   items-center justify-center gap-2  transition px-3.5 py-2  md:px-5 md:py-3  text-[9px]  md:text-sm">
+          <span className="bg-themePrimary text-white shadow-theme-xs rounded-full inline-flex font-alexandria   items-center justify-center gap-2  transition px-3.5 py-2  md:px-5 md:py-3 xl:py-2 2xl:py-3 text-[9px]  md:text-sm xl:text-[10px] 2xl:text-sm">
             TESTIMONIALS
           </span>
 
@@ -35,7 +35,7 @@ const SuccessStoryLeft = ({ itemVariants }: SuccessStoryLeftProps) => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex items-center w-full  justify-center lg:justify-start md:ml-10 h-full lg:ml-0"
+          className="flex items-center w-full  justify-center lg:justify-start md:ml-10 h-full lg:ml-0 xl:h-32"
         >
           <img
             src={PlacementsImg}

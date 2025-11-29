@@ -63,16 +63,16 @@ const CollabSection = () => {
   return (
     <motion.section
       id="about-us"
-      className="mx-auto w-full  py-8 xs:py-10 px-3 lg:px-3 sm:py-12 md:py-16 lg:py-20 overflow-hidden"
+      className="mx-auto w-full  py-8 xs:py-10 px-3 lg:px-3 sm:py-12 md:py-16 xl:py-15 2xl:py-20 overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       variants={containerVariants}
     >
-      <div className="flex flex-col gap-4 items-center justify-center mt-2 xl:mb-20 mb-10">
+      <div className="flex flex-col gap-4 items-center justify-center mt-2 2xl:mb-20 mb-10 mx-auto w-full xl:w-[80%] 2xl:w-[90%]">
         <Title
           title="Why Collaboration With Us?"
-          className="text-center xl:w-[60%] 2xl:w-[90%]"
+          className="text-center xl:w-[60%] 2xl:w-[90%] xl:leading-11!"
         />
       </div>
       <motion.div
@@ -80,7 +80,7 @@ const CollabSection = () => {
         variants={containerVariants}
       >
         <motion.p
-          className="text-[#585D69] col-span-3  text-center lg:text-left text-xs md:text-sm lg:text-base  xl:text-base  2xl:text-xl 3xl:text-2xl font-normal     font-alexandria lg:leading-6 xl:leading-6  2xl:leading-11"
+          className="text-[#585D69] col-span-3  text-center lg:text-left text-xs md:text-sm lg:text-base  xl:text-base  2xl:text-xl 3xl:text-2xl font-normal     font-alexandria lg:leading-6 xl:leading-7 2xl:leading-11 xl:pr-10 2xl:pr-0"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -98,14 +98,14 @@ const CollabSection = () => {
           out talented individuals.
         </motion.p>
 
-        <div className="bg-[#E2ECFF]  p-6 xl:p-10 2xl:p-12 rounded-2xl xl:rounded-3xl 2xl:rounded-4xl relative col-span-4 mt-6  lg:mt-0">
+        <div className="bg-[#E2ECFF]  p-6 xl:p-8 2xl:p-12 rounded-2xl xl:rounded-3xl 2xl:rounded-4xl relative col-span-4 mt-6  lg:mt-0">
           <div className="w-[70%]">
             <Title
               title="What This Partnership Brings to Your Campus"
               className="text-start! text-base! sm:text-base! md:text-lg! lg:text-lg! xl:text-2xl! 2xl:text-3xl! 3xl:text-4xl!  leading-tight! "
             />
 
-            <div className="flex flex-col gap-3 xl:gap-4 2xl:gap-5 mt-10 ">
+            <div className="flex flex-col gap-3 xl:gap-4 2xl:gap-5 mt-10 xl:mt-5 2xl:mt-10 ">
               {data.map((item) => (
                 <div key={item.id} className="flex items-start gap-4 2xl:gap-6">
                   <img
@@ -113,7 +113,7 @@ const CollabSection = () => {
                     alt={item.description}
                     className="w-3.5 h-3.5 2xl:w-5 2xl:h-5 mt-1"
                   />
-                  <p className="text-start! text-[#19213D] text-sm! sm:text-sm! md:text-base! lg:text-base! xl:text-xl! 2xl:text-xl! 3xl:text-2xl leading-tight! font-medium font-alexandria">
+                  <p className="text-start! text-[#19213D] text-sm! sm:text-sm! md:text-base! lg:text-base! xl:text-base! 2xl:text-xl! 3xl:text-2xl leading-tight! font-medium font-alexandria">
                     {item.description}
                   </p>
                 </div>

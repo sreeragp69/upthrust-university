@@ -71,29 +71,29 @@ const containerVariants = {
 
 export default function HowItWorks() {
   return (
-    <section className="w-full py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 ">
+    <section className="w-full py-12 md:py-16 xl:py-10 2xl:py-20 px-4 sm:px-6 lg:px-8 ">
       <div className=" mx-auto">
         {/* Header Section */}
         <motion.div
-          className="text-center mb-8 md:mb-12 lg:mb-16"
+          className="text-center mb-8 md:mb-12 lg:mb-16 xl:mb-6 2xl:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <Title title="How it Works" />
+          <Title title="How its Works" />
         </motion.div>
 
         {/* Description Section */}
         <motion.div
-          className=" mx-auto mb-12 md:mb-16 lg:mb-20 px-4 w-[90%] text-center"
+          className=" mx-auto mb-12 md:mb-16 lg:mb-20 xl:mb-0 2xl:mb-20 px-4 w-[90%] text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
           <Desc
-            className="font-alexandria! font-normal! text-[#585D69]! text-sm md:text-base lg:text-lg  xl:text-xl  2xl:text-xl! leading-! "
+            className="font-alexandria! font-normal! text-[#585D69]! text-sm md:text-base lg:text-lg  xl:text-sm  2xl:text-xl! xl:leading-4! 2xl:leading-7! "
             desc="Every student learns by doing and develops confidently into their chosen vocation thanks to collaborative tasks, creative challenges, and ongoing feedback. Our programs blend practical education with training pertinent to the workplace. After starting with fundamental ideas, students go on to useful projects that make use of actual tools. They put their knowledge to use, develop portfolios, and acquire employable skills under the guidance of knowledgeable mentors."
           />
         </motion.div>

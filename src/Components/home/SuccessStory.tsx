@@ -52,7 +52,7 @@ const SuccessStory = () => {
     <>
       <motion.section
         id="about-us"
-        className="mx-auto w-full  py-8 xs:py-10 px-3 lg:px-3 sm:py-12 md:py-16 lg:py-20 overflow-hidden"
+        className="mx-auto w-full  py-8 xs:py-10 px-3 lg:px-3 sm:py-12 md:py-16 xl:py-10 2xl:py-20 overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
@@ -99,7 +99,7 @@ const SuccessStory = () => {
               {videoList.slice(1).map((item, index) => (
                 <motion.div
                   key={index}
-                  className="relative w-full sm:h-32 md:h-40 lg:h-40 xl:h-44 2xl:h-56 overflow-hidden rounded-3xl lg:rounded-[40px]  group cursor-pointer"
+                  className="relative w-full sm:h-32 md:h-40 lg:h-40 xl:h-32 2xl:h-56 overflow-hidden rounded-3xl lg:rounded-[40px] xl:rounded-2xl   2xl:rounded-[40px]   group cursor-pointer"
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
@@ -114,8 +114,8 @@ const SuccessStory = () => {
 
                      {/* PLAY BUTTON */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="p-4 rounded-full bg-white/20 backdrop-blur-md group-hover:bg-white/30 transition-all">
-                  <Play size={36} className="text-white" />
+                <div className="p-4 xl:p-2 2xl:p-4 rounded-full bg-white/20 backdrop-blur-md group-hover:bg-white/30 transition-all">
+                  <Play size={36} className="text-white/89"  />
                 </div>
               </div>
                 </motion.div>

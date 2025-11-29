@@ -6,7 +6,7 @@ import SubscriptionForm from "../hero-section/SubscriptionForm";
 export default function HeroSection() {
   return (
     <>
-      <div className="flex lg:flex-row flex-col-reverse gap-y-16 items-center justify-between py-16 lg:mt-32">
+      <div className="flex lg:flex-row flex-col-reverse xl:grid xl:grid-cols-12 gap-y-16 items-center justify-between py-16 xl:pb-1 2xl:py-16 lg:mt-3">
         <SubscriptionForm display="block" />
 
         {/* Left Content */}
@@ -14,7 +14,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          className="flex-1 relative"
+          className="flex-1 relative col-span-7"
         >
           {/* Main Heading */}
           <motion.h1
@@ -30,12 +30,10 @@ export default function HeroSection() {
 
           {/* Description */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.7 }}
-            className="mb-8 mt-8"
+            
+            className="mb-8 mt-8 xl:mb-1 xl:mt-1 2xl:mb-8 2xl:mt-8"
           >
-            <p className="text-gray-600 text-xl xl:text-2xl font-light leading-tight mb-2 2xl:absolute max-w-xs xl:max-w-lg 3xl:-right-28 2xl:-right-40 4xl:-right-20 bottom-10 font-alexandria">
+            <p className="text-gray-600 text-xl xl:text-base 2xl:text-2xl font-light leading-tight mb-2 xl:absolute max-w-xs xl:max-w-84 2xl:max-w-lg xl:right-12 3xl:-right-28 2xl:-right-40 4xl:-right-20 bottom-10 xl:bottom-4 2xl:bottom-10  font-alexandria">
               The main goal of{" "}
               <span className="font-medium text-blue-600">
                 The Upthrust Eduversity
@@ -50,10 +48,10 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 0.5 }}
-            className="bg-white rounded-3xl px-6 py-4 w-fit shadow-lg"
+            className="bg-white rounded-2xl 2xl:rounded-3xl px-6 py-2 xl:px-3 xl:px-4 2xl:px-6  2xl:py-4 w-fit shadow-lg"
           >
             <div className="flex items-center gap-3">
-              <span className="text-gray-700 font-medium text-lg leading-5 text-center font-alexandria ">
+              <span className="text-gray-700 font-medium text-lg xl:text-sm 2xl:text-lg leading-5 text-center font-alexandria ">
                 Trusted By 2000+ <br />{" "}
                 <span className="text-blue-600">STUDENTS</span>
               </span>
@@ -76,11 +74,11 @@ export default function HeroSection() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          className="flex-1 relative flex flex-col gap-24 justify-center items-center"
+          className="flex- relative flex flex-col gap-10 xl:gap-8 2xl:gap-24 justify-center items-end col-span-5 -mt-15"
         >
           {/* Placeholder for Laptop Boy Image */}
-          <div className="relative w-full h-96 flex items-center justify-center">
-            <img src={LaptopBoy} alt="boy with laptop" />
+          <div className="relative w-full h-96 xl:h-85  flex items-center justify-end ">
+            <img src={LaptopBoy} alt="boy with laptop" className="xl:h-full " />
           </div>
           <FloatingIcons />
           <SubscriptionForm display="hidden" />

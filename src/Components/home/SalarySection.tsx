@@ -26,24 +26,24 @@ const SalarySection = () => {
           {/* Title */}
           <div className=" lg:w-1/2 mx-auto">
             <Title
-              className="text-center text-white   xl:leading-16!"
+              className="text-center text-white   2xl:leading-16!"
               title="Graphs of Salaries, Student Achievement, and other"
             />
           </div>
 
           {/* Three cards layout */}
-          <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 mt-6 xl:mt-20">
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 mt-6 xl:mt-16 2xl:mt-20">
             {/* Left Card - Text Content */}
-            <div className=" text-white relative flex flex-col gap-6 z-10 xl:min-h-[400px] md:min-h-auto md:p-6">
-              <p className="text-white text-xs md:text-sm lg:text-sm  xl:text-base  2xl:text-2xl font-light   text-center lg:text-start  font-alexandria lg:leading-6 xl:leading-6  2xl:leading-9!">
+            <div className=" text-white relative flex flex-col gap-6 z-10 xl:min-h-[400px] md:min-h-auto md:p-6 xl:pr-0">
+              <p className="text-white text-xs md:text-sm lg:text-sm  xl:text-base  2xl:text-2xl font-light   text-center lg:text-start  font-alexandria lg:leading-6 xl:leading-5  2xl:leading-9!">
                 Our programs are structured to produce quantifiable results, and
                 graduates can confidently enter lucrative positions in the
                 gaming sector. With competitive offers ranging from{" "}
-                <span className=" font-medium uppercase text-xs md:text-sm lg:text-xs  xl:text-base  2xl:text-2xl text-[#FABB1E] font-alexandria">
+                <span className=" font-medium uppercase text-xs md:text-sm lg:text-xs  xl:text-sm  2xl:text-2xl text-[#FABB1E] font-alexandria">
                   6 LPA to 22 LPA
                 </span>
                 , alumni have landed{" "}
-                <span className=" font-medium text-xs md:text-sm lg:text-xs  xl:text-base  2xl:text-2xl uppercase text-[#FC4AFF] font-alexandria">
+                <span className=" font-medium text-xs md:text-sm lg:text-xs  xl:text-sm  2xl:text-2xl uppercase text-[#FC4AFF] font-alexandria">
                   Jobs as VR/AR Game Developers, Unity and Unreal Developers,
                   Game Designers, NFT and Web 3.0 Game Developers, and 3D
                   Artists.
@@ -59,21 +59,21 @@ const SalarySection = () => {
             </div>
 
             {/* Middle Card - Jobs Number */}
-            <div className="z-20 relative max-h-[93%] lg:max-h-[100%]  xl:max-h-[93%] md:w-[70%] mx-auto xl:w-full! backdrop-blur-xl rounded-4xl bg-linear-to-t from-[#363636]/30 to-[#D9D9D9]/20 border border-white/50 shadow-lg flex flex-col items-center justify-center  p-10">
+            <div className="z-20 relative max-h-[93%] lg:max-h-[100%]  xl:max-h-[93%] md:w-[70%] mx-auto xl:w-full! backdrop-blur-xl rounded-4xl bg-linear-to-t from-[#363636]/30 to-[#D9D9D9]/20 border border-white/50 shadow-lg flex flex-col items-center justify-center  p-10 xl:p-0">
               <div className="flex flex-col items-center gap-10  2xl:gap-32 lg:px-16 ">
                 <h3 className=" text-white font-semibold text-3xl  md:text-lg lg:text-lg xl:text-2xl 2xl:text-4xl leading-9 text-center">
-                  Experience Level of Gaming Jobs in 2025
+                  Experience Level of Gaming Jobs <br /> in 2025
                 </h3>
 
                 <div>
                   <p className="text-white font-semibold text-lg md:text-lg lg:text-lg xl:text-2xl 2xl:text-3xl leading-9 text-center">
-                    <span className="bg-[#FABB1E] text-black font-semibold text-xl p-1  md:text-lg lg:text-lg xl:text-2xl 2xl:text-3xl leading-9 text-center rounded-lg lg:p-0.5">
+                    <span className="bg-[#FABB1E] text-black font-bold text-xl p-1  md:text-lg lg:text-lg xl:text-2xl 2xl:text-3xl leading-9 text-center rounded-lg lg:p-0.5">
                       JOBS
                     </span>{" "}
-                    Available in this Sector Currently
+                    Available in <br /> this Sector Currently
                   </p>
 
-                  <p className="stroke-2 text-center text-white text-6xl lg:text-5xl stroke-black">
+                  <p className="text-stroke-1 text-center  text-6xl lg:text-5xl ">
                     109,000
                   </p>
                 </div>
@@ -81,8 +81,8 @@ const SalarySection = () => {
             </div>
 
             {/* Right Card - Salary Table */}
-            <GlassCard className="relative pt-10 pb-8 px-4  xl:max-h-[93%] h-fit w-[100%]! lg:w-[70%]! mx-auto xl:w-full! z-20">
-              <h3 className="text-2xl font-semibold text-white mb-6 text-center font-nunito">
+            <GlassCard className="relative pt-10 xl:pt-5 pb-8 px-4 xl:pb-12 2xl:pb-8 xl:max-h-[93%] h-fit w-[100%]! lg:w-[70%]! mx-auto xl:w-full! z-20">
+              <h3 className="text-2xl xl:text-base 2xl:text-2xl font-semibold text-white mb-6 xl:mb-3 2xl:mb-6 text-center font-nunito">
                 <span className=" font-medium  text-[#FABB1E] font-alexandria">
                   {" "}
                   Salary{" "}
@@ -90,27 +90,27 @@ const SalarySection = () => {
                 Packages for Freshers in India
               </h3>
 
-              <div className="flex flex-col border border-white/40 rounded-2xl inset-shadow-xl">
+              <div className="flex flex-col border border-white/20 border-t-white/10 rounded-2xl shadow-[inset_0_4px_8px_rgba(0,0,0,0.3)]">
                 {salaryData.map((item, index) => {
                   const isLast = index === salaryData.length - 1;
 
                   return (
                     <div
                       key={index}
-                      className={`flex justify-between px-4 py-3.5 font-bold font-nunito
+                      className={`flex justify-between px-4 py-3.5 xl:py-2 font-bold font-nunito
                     ${
                       !isLast
                         ? index % 2 === 0
-                          ? "bg-white/5"
-                          : "bg-white/[0.09]"
+                          ? "bg-white/1"
+                          : "bg-white/[0.03]"
                         : ""
                     }
                   `}
                     >
-                      <div className="text-sm font-bold text-white">
+                      <div className="text-xs md:text-sm lg:text-sm  xl:text-xs  2xl:text-2xl  font-bold text-white">
                         {item.role}
                       </div>
-                      <div className="text-[0.85rem] text-white">
+                      <div className="text-xs md:text-sm lg:text-sm  xl:text-[10px]  2xl:text-2xl text-white">
                         {item.range}
                       </div>
                     </div>

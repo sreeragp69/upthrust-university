@@ -43,7 +43,7 @@ const campusFeatures = [
   },
 ];
 
-const CampusSection = () => {
+const CampusSection = () => { 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -72,9 +72,9 @@ const CampusSection = () => {
       topGradient={true}
       bottomGradient={true}
       image={CampusImage}
-      className="mx-auto w-full  py-8 xs:py-10 px-3 lg:px-3 sm:py-12 md:py-16 lg:py-20 overflow-hidden "
+      className="mx-auto w-full  py-8 xs:py-10 px-3 lg:px-3 sm:py-12 md:py-16 xl:py-10 2xl:py-20 overflow-hidden "
     >
-    <div className="max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) mx-auto">
+    <div className="max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) mx-auto  px-15">
     <motion.div
         initial="hidden"
         whileInView="visible"
@@ -85,7 +85,7 @@ const CampusSection = () => {
         {/* Heading Section */}
         <motion.div
           variants={itemVariants}
-          className="mb-2 sm:mb-2 lg:mb-5 text-center 2xl:w-[60%] w-full"
+          className="mb-2 sm:mb-2 lg:mb-5 text-center xl:w-[55%] 2xl:w-[60%] w-full"
         >
           <h1 className="text-themeGray font-bold text-2xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-6xl leading-9 2xl:leading-15 text-centermb-2 ">
             Bring Industry-Ready Courses to
@@ -98,7 +98,7 @@ const CampusSection = () => {
           variants={itemVariants}
           className="text-center mb-1 sm:mb-2 lg:mb-3 "
         >
-          <p className="text-sm sm:text-sm md:text-base font-alexandria lg:text-lg xl:text-xl 2xl:text-2xl  text-gray-700 leading-relaxed">
+          <p className="text-sm sm:text-sm md:text-base font-alexandria lg:text-lg xl:text-lg 2xl:text-2xl  text-gray-700 leading-relaxed">
             <span className="text-gray-600">Upgrade </span>
             <span className=" text-red-600">Your Campus</span>
             <span className="text-gray-600"> With Industry-Focused, </span>
@@ -109,9 +109,10 @@ const CampusSection = () => {
         {/* Description Text */}
         <motion.div
           variants={itemVariants}
-          className="text-center mb-8 sm:mb-12 lg:mb-16 w-[80%]"
+          className="text-center mb-8 sm:mb-12 lg:mb-16 w-[80%] xl:w-[70%] 2xl:w-[80%]"
         >
           <Desc
+          className="  xl:text-sm! xl:leading-4! 2xl:leading-7! xl:font-normal!"
             desc="  In order to ensure that students get both theoretical knowledge and
             practical experience, our programs are made to integrate practical
             learning, real-world resources, and innovative teaching techniques.
@@ -124,9 +125,9 @@ const CampusSection = () => {
         {/* Center Text */}
         <motion.div
           variants={itemVariants}
-          className="text-center mb-10 sm:mb-14 lg:mb-20 w-[95%] 2xl:w-[50%]  font-alexandria "
+          className="text-center mb-10 sm:mb-14 lg:mb-20 xl:mb-5 2xl:mb-20 w-[95%] xl:w-[40%] 2xl:w-[50%]  font-alexandria "
         >
-          <h2 className="text-base  sm:text-3xl lg:text-4xl font-semibold text-[#222428] leading-snug">
+          <h2 className="text-base  sm:text-3xl xl:text-2xl 2xl:text-4xl font-semibold text-[#222428] leading-snug">
             Your campus may become a center of innovation and talent by
           </h2>
         </motion.div>
@@ -134,7 +135,7 @@ const CampusSection = () => {
         {/* Cards Grid */}
         <motion.div
           variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-6 w-full "
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 xl:gap-4 2xl:gap-6 w-full "
         >
           {campusFeatures.map((feature) => (
             <CampusCard key={feature.id} feature={feature} />

@@ -9,28 +9,31 @@ export default function FloatingIcons() {
       id: 1,
       Icon: SpecsIcon,
       color: "bg-red-400",
-      top: "100px",
-      left: "9vw",
+      top: "90px",
+      left: "11vw",
       delay: 0,
       scale: 1.2,
+      size:"w-10 h-10 md:w-12 md:h-12 lg:w-10 lg:h-10 xl:w-12 xl:h-12 2xl:w-20 2xl:h-20",
     },
     {
       id: 2,
       Icon: unityIcon,
       color: "bg-blue-500",
-      top: "120px",
-      right: "8vw",
+      top: "100px",
+      right: "1vw",
       delay: 0.2,
       scale: 1.3,
+      size:"w-10 h-10 md:w-12 md:h-12 lg:w-10 lg:h-10 xl:w-15 xl:h-15 2xl:w-20 2xl:h-20",
     },
     {
       id: 3,
       Icon: unrealIcon,
       color: "bg-purple-400",
       top: "20px",
-      right: "12vw",
+      right: "3vw",
       delay: 0.4,
       scale: 1,
+      size:"w-10 h-10 md:w-12 md:h-12 lg:w-10 lg:h-10 xl:w-12 xl:h-12 2xl:w-20 2xl:h-20",
     },
   ];
 
@@ -44,7 +47,7 @@ const randomFloatVariant = () => ({
 
 
   return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+    <div className="absolute inset-0  pointer-events-none overflow-hidden ">
       {icons.map((icon) => {
         const { top, right, left, delay } = icon;
         return (
@@ -59,7 +62,7 @@ const randomFloatVariant = () => ({
               delay,
               ease: "easeInOut",
             }}
-            className={`absolute rounded-full  shadow-lg  size-16 lg:size-[unset]`}
+            className={`absolute rounded-full shadow-lg ${icon.size} lg:size-[unset]`}
             style={{ top, right, left }}
             alt=""
           />

@@ -64,8 +64,8 @@ export const Select: React.FC<SelectProps> = ({
           type="button"
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           className={`
-            w-full h-10 sm:h-11 md:h-12 px-3 sm:px-4 rounded-xl border border-gray-200
-            focus:ring-2 focus:ring-blue-500 focus:border-transparent
+            w-full h-10 sm:h-11 md:h-12 xl:h-8 2xl:h-12 px-3 sm:px-4 rounded-xl xl:rounded-lg 2xl:rounded-xl border border-gray-200
+            focus:ring-2 xl:focus:ring-1 2xl:focus:ring-2 focus:ring-blue-500 focus:border-transparent
             outline-none text-sm text-left flex items-center justify-between
             bg-white transition-all duration-200
             ${error ? "border-red-500" : ""}

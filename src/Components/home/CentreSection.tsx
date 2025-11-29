@@ -14,7 +14,6 @@ const CentreSectionCard1 = {
 const CentreSectionCard2 = {
   image: centreSectionImg2,
   alt: "Prashanti Groups of Institutes",
-  
 };
 const CentreSectionCard3 = {
   image: centreSectionImg3,
@@ -79,90 +78,84 @@ const CentreSection = () => {
       image={centreSectionImgBg}
       className="mx-auto w-full  py-8 xs:py-10 px-3 lg:px-3 sm:py-12 md:py-16 lg:py-20 overflow-hidden"
     >
-  <div className="max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) mx-auto">
-  <motion.section
-        className=" mb-36 lg:mb-20  xl:mb-10 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20   mx-auto lg:px-8 overflow-hidden"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-50px" }}
-        variants={containerVariants}
-      >
-        <div className="mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-8 lg:gap-12 items-center">
-            {/* Left Content */}
-            <motion.div
-              className="flex flex-col items-center   text-center lg:text-center w-full"
-              variants={itemVariants}
-            >
-              <div className="flex items-center flex-col  lg:gap-1 justify-center lg:justify-start mb-4">
-                <motion.h2
-                  className="text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl font-bold text-[#1C1C1C] leading-3"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  Our Centre of
-                </motion.h2>
-                <motion.h2
-                  className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold leading-tight text-[#1C1C1C]"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                >
-                  Innovation
-                </motion.h2>
-              </div>
-              <motion.p
-                className="text-sm sm:text-base xl:text-xl justify-start text-center  md:text-sn  max-w-sm sm:max-w-sm md:max-w-md lg:max-w-[70%]  font-alexandria text-lightGray leading-relaxed xl:leading-7 "
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
+      <div className="max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) mx-auto">
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={containerVariants}
+        >
+          <div className="mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-8 lg:gap-12 items-center">
+              {/* Left Content */}
+              <motion.div
+                className="flex flex-col items-center   text-center lg:text-center w-full"
+                variants={itemVariants}
               >
-                We have established “Centres of Excellence” at some of the
-                leading universities of Madhya Pradhesh. <br /> Each centre is
-                designed to nurture talent, foster collaboration and bring bold
-                ideas to life. From game development to digital marketing we
-                provide an ecosystem that encourages experimentation and
-                excellence. These hubs empower learners and professionals to
-                shape the future of digital innovation.
-              </motion.p>
-            </motion.div>
+                <div className="flex items-center flex-col  lg:gap-1 justify-center lg:justify-start mb-4">
+                  <motion.h2
+                    className="text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-[#1C1C1C] leading-3"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    Our Centre of <br />
+                    <span className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight text-[#1C1C1C]">
+                      Innovation
+                    </span>
+                  </motion.h2>
+                </div>
+                <motion.p
+                  className="text-sm sm:text-base xl:text-sm 2xl:text-xl justify-start text-center  md:text-sn  max-w-sm sm:max-w-sm md:max-w-md lg:max-w-[70%]  font-alexandria text-lightGray leading-relaxed xl:leading-4 2xl:leading-7 "
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                >
+                  We have established “Centres of Excellence” at some of the
+                  leading universities of Madhya Pradhesh. <br /> Each centre is
+                  designed to nurture talent, foster collaboration and bring
+                  bold ideas to life. From game development to digital marketing
+                  we provide an ecosystem that encourages experimentation and
+                  excellence. These hubs empower learners and professionals to
+                  shape the future of digital innovation.
+                </motion.p>
+              </motion.div>
 
-            {/* Right Cards */}
-            <motion.div
-              className="lg:grid flex flex-wrap sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-8 order-1 items-center justify-center lg:order-2"
-              variants={itemVariants}
-            >
-              <CentreSectionCard
-                image={CentreSectionCard1.image}
-                alt={CentreSectionCard1.alt}
-                variants={cardVariants}
-              />
+              {/* Right Cards */}
+              <motion.div
+                className="lg:grid flex flex-wrap sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 xl:gap-6 2xl:gap-8 order-1 items-center justify-center lg:order-2 xl:px-20"
+                variants={itemVariants}
+              >
+                <CentreSectionCard
+                  image={CentreSectionCard1.image}
+                  alt={CentreSectionCard1.alt}
+                  variants={cardVariants}
+                />
 
-              <CentreSectionCard
-                image={CentreSectionCard2.image}
-                alt={CentreSectionCard2.alt}
-                title={CentreSectionCard2.title}
-                variants={cardVariants}
-              />
+                <CentreSectionCard
+                  image={CentreSectionCard2.image}
+                  alt={CentreSectionCard2.alt}
+                  title={CentreSectionCard2.title}
+                  variants={cardVariants}
+                />
 
-              <CentreSectionCard
-                image={CentreSectionCard3.image}
-                alt={CentreSectionCard3.alt}
-                title={CentreSectionCard3.title}
-                variants={cardVariants}
-              />
-              <CentreSectionCard
-                image={CentreSectionCard4.image}
-                alt={CentreSectionCard4.title}
-                title={CentreSectionCard4.title}
-                variants={cardVariants}
-              />
-            </motion.div>
+                <CentreSectionCard
+                  image={CentreSectionCard3.image}
+                  alt={CentreSectionCard3.alt}
+                  title={CentreSectionCard3.title}
+                  variants={cardVariants}
+                />
+                <CentreSectionCard
+                  image={CentreSectionCard4.image}
+                  alt={CentreSectionCard4.title}
+                  title={CentreSectionCard4.title}
+                  variants={cardVariants}
+                />
+              </motion.div>
+            </div>
           </div>
-        </div>
-      </motion.section>
-  </div>
+        </motion.section>
+      </div>
     </GradientWrapper>
   );
 };
@@ -181,8 +174,8 @@ const CentreSectionCard = ({
 }: CentreSectionCardProps) => {
   return (
     <motion.div
-      className="bg-white h-full p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl sm:rounded-3xl lg:rounded-[44px] shadow-theme-xs flex flex-col justify-between
-       aspect-415/298 w-full max-w-[300px] sm:max-w-[350px] md:max-w-[250px] lg:max-w-[415px]  shadow-xl shadow-gray-300"
+      className="bg-white h-full p-4 sm:p-6 md:p-8 xl:p-1 2xlg:p-10 rounded-2xl sm:rounded-3xl  2xl:rounded-[44px] shadow-theme-xs flex flex-col justify-between
+       aspect-415/298 w-full max-w-[300px] sm:max-w-[350px] md:max-w-[250px] lg:max-w-[415px]  shadow-xl shadow-gray-400"
       variants={variants}
       initial="hidden"
       whileInView="visible"

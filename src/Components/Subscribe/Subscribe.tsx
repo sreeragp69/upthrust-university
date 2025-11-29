@@ -41,27 +41,27 @@ const Subscribe: React.FC<SubscribeProps> = ({ isLoading = false }) => {
       transition={{ duration: 0.6 }}
       className="w-[70%] max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8  absolute z-10  -top-[20%] md:-top-[25%] lg:-top-[20%] left-1/2 -translate-x-1/2"
     >
-      <div className="bg-linear-to-r from-themePrimary to-themePrimary rounded-4xl md:rounded-[50px] lg:rounded-[53px] shadow-2xl overflow-hidden relative">
+      <div className="bg-linear-to-r from-themePrimary to-themePrimary rounded-4xl md:rounded-[50px] lg:rounded-[40px] 2xl:rounded-[53px] shadow-2xl overflow-hidden relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5 md:gap-6 lg:gap-8 items-center relative z-10">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-3  sm:space-y-4 md:space-y-5 lg:space-y-5 p-4 sm:p-5 md:p-6 lg:p-8 xl:p-12 order-2 lg:order-1 text-center lg:col-span-7 lg:text-left"
+            className="space-y-3  sm:space-y-4 md:space-y-5 lg:space-y-5 p-4 sm:p-5 md:p-6 lg:p-8 xl:p-10 order-2 lg:order-1 text-center lg:col-span-7 lg:text-left"
           >
             <div className="space-y-2 sm:space-y-3 ">
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-white/90 text-base sm:text-lg md:text-xl lg:text-xl xl:text-3xl 2xl:text-5xl xl:leading-10 font-bold leading-tight"
+                className="text-white/90 text-base sm:text-lg md:text-xl lg:text-xl xl:text-3xl 2xl:text-5xl xl:leading-7 2xl:leading-10 font-bold leading-tight"
               >
                 {SUBSCRIBE_DATA.subheading}
               </motion.p>
             </div>
 
-            <div className="text-white/90 text-xs sm:text-sm xl:text-base  2xl:text-lg xl:leading-tight font-alexandria">
+            <div className="text-white/90 text-xs sm:text-sm xl:text-xs  2xl:text-lg xl:leading-tight font-alexandria">
               {SUBSCRIBE_DATA.stats.label}
             </div>
 

@@ -85,7 +85,7 @@ export const HomeCourse: React.FC = () => {
   const [selectedCourse, setSelectedCourse] = useState<Course>(courses[0]);
 
   return (
-    <div className="w-full py-12 md:py-16 lg:py-20 ">
+    <div className="w-full py-12 md:py-16 lg:py-20 xl:py-10">
       <div className=" mx-auto">
         {/* Top Cards Grid */}
         <motion.div
@@ -115,17 +115,18 @@ export const HomeCourse: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className={`${selectedCourse.cardBgColor} relative rounded-3xl overflow-hidden`}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12  p-6 md:p-10 lg:p-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 xl:grid-cols-12 xl:gap-x-8  p-6 md:p-10 lg:p-12 xl:p-6">
             {/* Left Image */}
-            <div className=" col-span-3 2xl:col-span-5 2xl:min-h-100 hidden xl:block"></div>
+            
             <motion.div
               key={`image-${selectedCourse.id}`}
-              className="hidden xl:flex  items-center justify-center  lg:col-span-5 absolute left-6 2xl:left-14   bottom-0"
+              // className="hidden xl:flex  items-center justify-center  lg:col-span-5 xl:col-span-5!  absolute left-6 2xl:left-14   bottom-0"
+              className="col-span-5 flex justify-end items-end relative pr-"
             >
               <motion.img
                 src={selectedCourse.image}
                 alt="Game Developer"
-                className="w-full h-96 xl:h-72 2xl:h-auto 2xl:min-h-100 object-cover rounded-2xl"
+                className="w-full h-96 xl:h-full 2xl:h-auto 2xl:min-h-100 object-contain rounded-2xl absolute -bottom-3 "
               />
             </motion.div>
 
@@ -135,11 +136,11 @@ export const HomeCourse: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="flex flex-col  gap-8 col-span-7 relative "
+              className="flex flex-col  gap-8 xl:col-span-7 relative "
             >
               <div>
                 <motion.h2
-                  className="text-xl md:text-2xl lg:text-3xl 2xl:text-5xl  text-black mb-1 font-bold font-montserrat"
+                   className="text-xl md:text-2xl lg:text-2xl 2xl:text-5xl  text-black mb-1 xl:mb-0 font-bold font-montserrat"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
@@ -147,7 +148,7 @@ export const HomeCourse: React.FC = () => {
                   {selectedCourse.shortDescription}
                 </motion.h2>
                 <motion.h3
-                  className="text-sm md:text-base 2xl:text-lg text-gray-800 font-bold font-montserrat"
+                      className="text-sm md:text-base xl:text-xs 2xl:text-lg text-gray-800 font-bold font-montserrat"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.25 }}
@@ -158,7 +159,7 @@ export const HomeCourse: React.FC = () => {
 
               <div className="space-y-8">
                 <motion.p
-                  className="text-[#121212] text-sm md:text-base lg:text-base  xl:text-lg  2xl:text-xl font-light font-alexandria lg:leading-6 xl:leading-6  2xl:leading-7  w-full sm:w-[60%] md:w-[75%] 2xl:w-[65%]"
+                  className="text-[#121212] text-sm md:text-base lg:text-base  xl:text-sm  2xl:text-xl font-light font-alexandria lg:leading-6 xl:leading-5  2xl:leading-7  w-full sm:w-[60%] md:w-[75%] 2xl:w-[65%]"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
@@ -183,12 +184,12 @@ export const HomeCourse: React.FC = () => {
                 // initial={{ opacity: 0, x: 50 }}
                 // animate={{ opacity: 1, x: 0 }}
                 // transition={{ duration: 0.6, delay: 0.1 }}
-                className="flex items-center h-28 md:h-30   justify-center  bottom-0 right-5 relative"
+                className="flex items-center h-28 md:h-30  xl:h-full justify-center  bottom-0 right-5 relative"
               >
                 <motion.img
                   src={selectedCourse.gameImage}
                   alt="Game Screenshot"
-                  className="w-fit right-0 bottom-0 absolute  lg:w-fit h-60 sm:h-90 md:h-72 2xl:h-96 object-contain rounded-2xl lg:-right-[4%] lg:-bottom-[40%] "
+                  className="w-fit right-0 bottom-0 absolute  lg:w-fit h-60 sm:h-90 md:h-50 2xl:h-96 object-contain rounded-2xl xl:absolute lg:-right-[4%] xl:-right-[5%] lg:-bottom-[40%] xl:-bottom-10 "
                   
                 />
               </motion.div>

@@ -83,7 +83,7 @@ const navGlowVariants = {
     opacity: 1,
     transition: {
       duration: 0.5,
-      ease: [0.4, 0, 0.2, 1],
+      ease: [0.4, 0, 0.2, 1], 
     },
   },
 };
@@ -103,10 +103,10 @@ export function MenuBar() {
       whileHover="hover"
     >
       <motion.div
-        className={`absolute -inset-2 bg-gradient-radial from-transparent ${"via-blue-400/30 via-30% via-purple-400/30 via-60% via-red-400/30 via-90%"} to-transparent rounded-3xl z-0 pointer-events-none`}
+        className={`absolute -inset-2 bg-gradient-radial from-transparent ${"via-blue-400/30 via-60% via-purple-400/30 via-60% via-red-400/30 via-90%"} to-transparent rounded-3xl z-0 pointer-events-none`}
         variants={navGlowVariants}
       />
-      <ul className="flex items-center gap-7 relative z-10">
+      <ul className="flex items-center xl:gap-7 2xl:gap-7 relative z-10">
         {menuItems.map((item, index) => (
           <motion.li key={item.label} className="relative">
             <motion.div
@@ -126,7 +126,7 @@ export function MenuBar() {
               />
               <motion.a
                 href={item.href}
-                className="flex items-center gap-2 px-4 py-2 relative z-10 bg-transparent text-muted-foreground group-hover:text-foreground transition-colors rounded-xl"
+                className="flex items-center gap-2 px-4 xl:px-1  xl:py-0 2xl:py-2 relative z-10 bg-transparent text-muted-foreground group-hover:text-foreground transition-colors rounded-xl"
                 variants={itemVariants}
                 transition={sharedTransition}
                 style={{
@@ -139,11 +139,11 @@ export function MenuBar() {
                 >
                   {/* {item.icon} */}
                 </span>
-                <span className="font-alexandria uppercase">{item.label}</span>
+                <span className="font-alexandria uppercase xl:text-[11px] 2xl:text-xs">{item.label}</span>
               </motion.a>
               <motion.a
                 href={item.href}
-                className="flex items-center gap-2 px-4 py-2 absolute inset-0 z-10 bg-transparent text-muted-foreground group-hover:text-foreground transition-colors rounded-xl"
+                className="flex items-center gap-2 px-4 xl:py-0 2xl:py-2 absolute inset-0 z-10 bg-transparent text-muted-foreground group-hover:text-foreground transition-colors rounded-xl"
                 variants={backVariants}
                 transition={sharedTransition}
                 style={{
@@ -157,7 +157,7 @@ export function MenuBar() {
                 >
                   {/* {item.icon} */}
                 </span>
-                <span className="font-alexandria uppercase">{item.label}</span>
+                <span className="font-alexandria uppercase xl:text-[11px] 2xl:text-xs ">{item.label}</span>
               </motion.a>
             </motion.div>
           </motion.li>
