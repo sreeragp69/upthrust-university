@@ -76,9 +76,9 @@ const CentreSection = () => {
       topGradient={false}
       bottomGradient={false}
       image={centreSectionImgBg}
-      className="mx-auto w-full  py-8 xs:py-10 px-3 lg:px-3 sm:py-12 md:py-16 lg:py-20 overflow-hidden"
+      className="mx-auto w-full  py-8 xs:py-10  lg:px-3 sm:py-12 md:py-16 lg:py-20 overflow-hidden"
     >
-      <div className="max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) mx-auto">
+      <div className="max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) mx-auto lg:px-10 px-5">
         <motion.section
           initial="hidden"
           whileInView="visible"

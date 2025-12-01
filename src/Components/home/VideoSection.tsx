@@ -37,7 +37,7 @@ const VideoSection = () => {
     <>
       <motion.section
         id="about-us"
-        className="mx-auto w-full xl:px-40 2xl:px-48 py-8 xs:py-10 px-3 lg:px-3 sm:py-12 md:py-16 lg:py-20 overflow-hidden bg-white"
+        className="mx-auto w-full xl:px-40 2xl:px-48 py-8 xs:py-10  lg:px-3 sm:py-12 md:py-16 lg:py-20 overflow-hidden bg-white"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}

@@ -35,7 +35,7 @@ const SuccessStoryLeft = ({ itemVariants }: SuccessStoryLeftProps) => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex items-center w-full  justify-center lg:justify-start md:ml-10 h-full lg:ml-0 xl:h-32"
+          className="flex items-center w-full  justify-center lg:justify-start md:ml-10 h-full lg:ml-0 xl:h-32 4xl:h-48"
         >
           <img
             src={PlacementsImg}

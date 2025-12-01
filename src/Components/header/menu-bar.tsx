@@ -16,7 +16,7 @@ const menuItems: MenuItem[] = [
   {
     icon: <Home className="h-5 w-5" />,
     label: "Home",
-    href: "#",
+    href: "#home",
     gradient:
       "radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(37,99,235,0.06) 50%, rgba(29,78,216,0) 100%)",
     iconColor: "text-blue-500",
@@ -24,7 +24,7 @@ const menuItems: MenuItem[] = [
   {
     icon: <Bell className="h-5 w-5" />,
     label: "About",
-    href: "#",
+    href: "#about-us",
     gradient:
       "radial-gradient(circle, rgba(249,115,22,0.15) 0%, rgba(234,88,12,0.06) 50%, rgba(194,65,12,0) 100%)",
     iconColor: "text-orange-500",
@@ -32,7 +32,7 @@ const menuItems: MenuItem[] = [
   {
     icon: <Settings className="h-5 w-5" />,
     label: "Programs",
-    href: "#",
+    href: "#programs",
     gradient:
       "radial-gradient(circle, rgba(34,197,94,0.15) 0%, rgba(22,163,74,0.06) 50%, rgba(21,128,61,0) 100%)",
     iconColor: "text-green-500",
@@ -40,7 +40,7 @@ const menuItems: MenuItem[] = [
   {
     icon: <User className="h-5 w-5" />,
     label: "our centre  ",
-    href: "#",
+    href: "#campus",
     gradient:
       "radial-gradient(circle, rgba(239,68,68,0.15) 0%, rgba(220,38,38,0.06) 50%, rgba(185,28,28,0) 100%)",
     iconColor: "text-red-500",
@@ -48,7 +48,7 @@ const menuItems: MenuItem[] = [
   {
     icon: <User className="h-5 w-5" />,
     label: "Contact",
-    href: "#",
+    href: "#contact-us",
     gradient:
       "radial-gradient(circle, rgba(239,68,68,0.15) 0%, rgba(220,38,38,0.06) 50%, rgba(185,28,28,0) 100%)",
     iconColor: "text-red-500",
@@ -96,9 +96,31 @@ const sharedTransition = {
 };
 
 export function MenuBar() {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace("#", "");
+    
+    if (targetId === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    const element = document.getElementById(targetId);
+    if (element) {
+      const headerOffset = 100; // Adjust this value based on your header height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <motion.nav
-      className="p-2 rounded-full bg-white backdrop-blur-lg hidden lg:block w-fit  relative overflow-hidden"
+      className="p-2 rounded-full bg-white backdrop-blur-lg hidden lg:block w-fit  relative overflow-hidden lg:mr-10 xl:mr-0 2xl:mr-8 4xl:mr-8"
       initial="initial"
       whileHover="hover"
     >
@@ -107,7 +129,7 @@ export function MenuBar() {
         variants={navGlowVariants}
       />
       <ul className="flex items-center xl:gap-7 2xl:gap-7 relative z-10">
-        {menuItems.map((item, index) => (
+        {menuItems.map((item) => (
           <motion.li key={item.label} className="relative">
             <motion.div
               className="block rounded-full overflow-visible group relative"
@@ -126,6 +148,7 @@ export function MenuBar() {
               />
               <motion.a
                 href={item.href}
+                onClick={(e) => handleClick(e, item.href)}
                 className="flex items-center gap-2 px-4 xl:px-1  xl:py-0 2xl:py-2 relative z-10 bg-transparent text-muted-foreground group-hover:text-foreground transition-colors rounded-xl"
                 variants={itemVariants}
                 transition={sharedTransition}
@@ -143,7 +166,8 @@ export function MenuBar() {
               </motion.a>
               <motion.a
                 href={item.href}
-                className="flex items-center gap-2 px-4 xl:py-0 2xl:py-2 absolute inset-0 z-10 bg-transparent text-muted-foreground group-hover:text-foreground transition-colors rounded-xl"
+                onClick={(e) => handleClick(e, item.href)}
+                className="flex items-center gap-2 px-1 xl:py-0 2xl:py-2 absolute inset-0 z-10 bg-transparent text-muted-foreground group-hover:text-foreground transition-colors rounded-xl"
                 variants={backVariants}
                 transition={sharedTransition}
                 style={{

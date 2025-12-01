@@ -18,6 +18,8 @@ import mcaImg2 from "../../assets/images/course/mcaImg2.png";
 import bcaImg1 from "../../assets/images/course/bcaImg1.png";
 import bcaImg2 from "../../assets/images/course/bcaImg2.png";
 
+import UnderLine from "../../assets/images/course/line.svg";
+
 interface Course {
   id: number;
   title: string;
@@ -115,9 +117,9 @@ export const HomeCourse: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className={`${selectedCourse.cardBgColor} relative rounded-3xl overflow-hidden`}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 xl:grid-cols-12 lg:gap-x-8  p-6 md:p-10 lg:p-6 xl:p-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-12 xl:grid-cols-12 lg:gap-x-8  p-6 md:p-10 lg:p-6 xl:p-6">
             {/* Left Image */}
-            
+
             <motion.div
               key={`image-${selectedCourse.id}`}
               // className="hidden xl:flex  items-center justify-center  lg:col-span-5 xl:col-span-5!  absolute left-6 2xl:left-14   bottom-0"
@@ -126,7 +128,7 @@ export const HomeCourse: React.FC = () => {
               <motion.img
                 src={selectedCourse.image}
                 alt="Game Developer"
-                className="w-full h-96 lg:h-full 2xl:h-auto 2xl:min-h-100 object-contain rounded-2xl absolute -bottom-3 "
+                className="w-full h-96 lg:h-full 2xl:min-h-100 hidden 4xl:block lg:block object-contain rounded-2xl absolute -bottom-3 "
               />
             </motion.div>
 
@@ -140,7 +142,7 @@ export const HomeCourse: React.FC = () => {
             >
               <div>
                 <motion.h2
-                   className="text-xl md:text-2xl lg:text-2xl 2xl:text-3xl 3xl:text-5xl  text-black mb-1 xl:mb-0 font-bold font-montserrat"
+                  className="text-xl md:text-2xl lg:text-2xl 2xl:text-3xl 3xl:text-5xl  text-black mb-1 xl:mb-0 font-bold font-montserrat"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
@@ -148,7 +150,7 @@ export const HomeCourse: React.FC = () => {
                   {selectedCourse.shortDescription}
                 </motion.h2>
                 <motion.h3
-                      className="text-sm md:text-base xl:text-xs 2xl:text-lg text-gray-800 font-bold font-montserrat"
+                  className="text-sm md:text-base xl:text-xs 2xl:text-lg text-gray-800 font-bold font-montserrat"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.25 }}
@@ -169,7 +171,7 @@ export const HomeCourse: React.FC = () => {
                 <motion.button
                   whileHover={{ scale: 1.08 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 2xl:py-4 px-10 2xl:px-20 rounded-full w-fit  transition-colors duration-300"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2  text-xs  sm:text-base sm:py-2.5 px-2.5 2xl:py-4 sm:px-10 2xl:px-20 rounded-full w-fit  transition-colors duration-300"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
@@ -189,8 +191,7 @@ export const HomeCourse: React.FC = () => {
                 <motion.img
                   src={selectedCourse.gameImage}
                   alt="Game Screenshot"
-                  className="w-fit right-0 bottom-0 absolute  lg:w-fit h-60 sm:h-90 md:h-50 2xl:h-96 object-contain rounded-2xl xl:absolute lg:-right-[4%] xl:-right-[5%] lg:-bottom-[40%] xl:-bottom-10 "
-                  
+                  className="w-fit  lg:w-fit h-60 sm:h-90 md:h-50 2xl:h-96 object-contain rounded-2xl absolute  -right-10 -bottom-10  xl:absolute lg:-right-[4%] xl:-right-[5%] lg:-bottom-[40%] xl:-bottom-10 "
                 />
               </motion.div>
             </motion.div>
@@ -207,6 +208,11 @@ export const HomeCourse: React.FC = () => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-script text-center mb-2 font-handlee text-black">
             Unique Blend Of Computer Science Fundamentals
           </h2>
+          <img
+            src={UnderLine}
+            alt="UnderLine"
+            className="w-fit h-full object-contain"
+          />
         </motion.div>
       </div>
     </div>

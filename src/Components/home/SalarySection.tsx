@@ -3,24 +3,11 @@ import Title from "../common/Title";
 import GlassCard from "../GlassCard";
 
 const SalarySection = () => {
-  const salaryData = [
-    { role: "Junior Programmer", range: "₹3 LPA - ₹5 LPA" },
-    { role: "Game Developer (2D/3D)", range: "₹3.3 LPA - ₹6 LPA" },
-    { role: "Game Designer", range: "₹3.5 LPA - ₹6.5 LPA" },
-    { role: "Digital Artist", range: "₹3 LPA - ₹5.5 LPA" },
-    { role: "Junior 3D Modeler and Animator", range: "₹3 LPA - ₹5 LPA" },
-    { role: "Multiplayer Integration Specialist", range: "₹3.5 LPA - ₹6 LPA" },
-    { role: "AR/VR/XR Developer", range: "₹4 LPA - ₹7 LPA" },
-    { role: "Game QA Tester", range: "₹2.5 LPA - ₹4.5 LPA" },
-    { role: "Game Monetization Strategist", range: "₹3.5 LPA - ₹6 LPA" },
-    { role: "Metaverse Specialist", range: "₹4 LPA - ₹7 LPA" },
-  ];
-
   return (
     <div className="bg-black relative  flex justify-center items-center min-h-screen  overflow-hidden">
       {/* Blurred floating background image */}
 
-      <div className="max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) mx-auto px-10">
+      <div className="max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) mx-auto lg:px-10 px-5">
         {/* Main content container */}
         <div className="relative  w-full  mx-auto py-6 lg:py-10">
           {/* Title */}
@@ -31,8 +18,17 @@ const SalarySection = () => {
             />
           </div>
 
+          {/* Blurred floating background image - moved outside grid */}
+          <div className="absolute   w-[800px] h-[800px]  xl:w-[1000px] xl:h-[1000px] 2xl:w-[1200px] 2xl:h-[1200px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-40 blur-[40px] animate-salary-float pointer-events-none z-0 md:w-[600px] md:h-[600px]">
+            <img
+              src={ChartsImage}
+              alt="Charts"
+              className="w-full h-full object-contain"
+            />
+          </div>
+
           {/* Three cards layout */}
-          <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 mt-6 xl:mt-16 2xl:mt-20">
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 mt-6 xl:mt-16 2xl:mt-20 relative z-10">
             {/* Left Card - Text Content */}
             <div className=" text-white relative flex flex-col gap-6 z-10 xl:min-h-[400px] md:min-h-auto md:p-6 xl:pr-0">
               <p className="text-white text-xs md:text-sm lg:text-sm  xl:text-base 2xl:text-xl 3xl:text-2xl font-light   text-center xl:text-start  font-alexandria lg:leading-6 xl:leading-5  2xl:leading-9!">
@@ -63,14 +59,6 @@ const SalarySection = () => {
 
               <SecondCard />
             </div>
-
-            <div className="absolute   w-[800px] h-[800px]  xl:w-[1000px] xl:h-[1000px] 2xl:w-[1200px] 2xl:h-[1200px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-40 blur-[40px] animate-salary-float pointer-events-none z-0 md:w-[600px] md:h-[600px]">
-              <img
-                src={ChartsImage}
-                alt="Charts"
-                className="w-full h-full object-contain"
-              />
-            </div>
           </div>
         </div>
       </div>
@@ -94,7 +82,7 @@ const FIrstCard = () => {
             Available in <br /> this Sector Currently
           </p>
 
-          <p className="text-stroke-1 text-center  text-6xl lg:text-5xl ">
+          <p className="text-stroke-1 text-center  text-6xl lg:text-5xl 4xl:text-7xl ">
             109,000
           </p>
         </div>
@@ -117,8 +105,8 @@ const SecondCard = () => {
     { role: "Metaverse Specialist", range: "₹4 LPA - ₹7 LPA" },
   ];
   return (
-    <GlassCard className="relative pt-10 xl:pt-5 pb-8 px-4 xl:pb-12 2xl:pb-8 xl:max-h-[93%] 2xl:max-h-[60%] 3xl:max-h-[93%] h-fit w-[100%]! lg:w-[70%]! mx-auto xl:w-full! z-20 ">
-      <h3 className="text-2xl xl:text-base 3xl:text-2xl font-semibold text-white mb-6 xl:mb-3 2xl:mb-6 text-center font-nunito">
+    <GlassCard className="relative pt-10 xl:pt-5 pb-8 px-4 xl:pb-12 2xl:pb-8 xl:max-h-[93%] 2xl:max-h-[60%] 3xl:max-h-[93%] h-fit w-[100%]! lg:w-[70%]! mx-auto xl:w-full! z-20 rounded-4xl!">
+      <h3 className="text-2xl xl:text-base 3xl:text-2xl font-semibold text-white mb-6 xl:mb-3 2xl:mb-6 4xl:mt-6 text-center font-nunito">
         <span className=" font-medium  text-[#FABB1E] font-alexandria">
           {" "}
           Salary{" "}
@@ -133,7 +121,7 @@ const SecondCard = () => {
           return (
             <div
               key={index}
-              className={`flex justify-between px-4 py-3.5 xl:py-2 font-bold font-nunito
+              className={`flex justify-between px-4 py-3.5 xl:py-2 4xl:py-2.5 font-bold font-nunito
           ${!isLast ? (index % 2 === 0 ? "bg-white/1" : "bg-white/[0.03]") : ""}
         `}
             >

@@ -6,7 +6,7 @@ import SubscriptionForm from "../hero-section/SubscriptionForm";
 export default function HeroSection() {
   return (
     <>
-      <div className="flex lg:flex-row flex-col-reverse xl:grid xl:grid-cols-12 gap-y-16 items-center justify-between py-16 xl:pb-1 2xl:py-16 lg:mt-3">
+      <div id="home" className="flex lg:flex-row flex-col-reverse xl:grid xl:grid-cols-12 gap-y-16 items-center justify-between py-16 xl:pb-1 2xl:py-16 lg:mt-3">
         <SubscriptionForm display="block" />
 
         {/* Left Content */}
@@ -14,14 +14,14 @@ export default function HeroSection() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          className="flex-1 relative col-span-7"
+          className="flex-1 relative col-span-7 mx-auto lg:mx-0 w-[80%]  lg:w-auto"
         >
           {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
-            className="text-4xl md:text-5xl  2xl:text-6xl 4xl:text-7xl font-medium  text-black  font-monument  uppercase "
+            className="text-4xl md:text-5xl  2xl:text-5xl 3xl:text-6xl 4xl:text-7xl font-medium text-center lg:text-left text-black  font-monument  uppercase w-full"
           >
             Developing <br className="hidden md:block" /> the Upcoming{" "}
             <br className="hidden md:block" />
@@ -31,9 +31,9 @@ export default function HeroSection() {
           {/* Description */}
           <motion.div
             
-            className="mb-8 mt-8 xl:mb-1 xl:mt-1 2xl:mb-8 2xl:mt-8"
+            className="mb-8 mt-8 xl:mb-1 xl:mt-1 2xl:mb-8 2xl:mt-8 text-center w-full"
           >
-            <p className="text-gray-600 text-xl xl:text-base 2xl:text-2xl font-light leading-tight mb-2 xl:absolute max-w-xs lg:max-w-full xl:max-w-84 2xl:max-w-lg xl:right-12 3xl:-right-28 2xl:-right-20 4xl:-right-20 bottom-10 xl:bottom-4 2xl:bottom-10  font-alexandria">
+            <p className=" text-gray-600 text-center lg:text-left w-full text-xl xl:text-base 2xl:text-xl 3xl:text-2xl font-light leading-tight mb-2 xl:absolute  lg:max-w-full xl:max-w-84 2xl:max-w-lg xl:right-12  3xl:-right-28 2xl:right-0 4xl:right-11 bottom-10 xl:bottom-4 3xl:bottom-10  font-alexandria">
               The main goal of{" "}
               <span className="font-medium text-blue-600">
                 The Upthrust Eduversity
@@ -48,10 +48,10 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 0.5 }}
-            className="bg-white rounded-2xl 2xl:rounded-3xl px-6 py-2 xl:px-3 xl:px-4 2xl:px-6  2xl:py-4 w-fit shadow-lg"
+            className="bg-white rounded-2xl 2xl:rounded-3xl px-6 mx-auto md:mx-0  py-2 xl:px-3 xl:px-4 2xl:px-6  2xl:py-4 w-fit shadow-lg 2xl:-mt-6 3xl:-mt-0"
           >
             <div className="flex items-center gap-3">
-              <span className="text-gray-700 font-medium text-lg xl:text-sm 2xl:text-lg leading-5 text-center font-alexandria ">
+              <span className="text-gray-700 font-medium text-lg xl:text-sm 3xl:text-lg leading-5 text-center font-alexandria ">
                 Trusted By 2000+ <br />{" "}
                 <span className="text-blue-600">STUDENTS</span>
               </span>
@@ -59,7 +59,7 @@ export default function HeroSection() {
                 {[1, 2, 3, 4].map((i) => (
                   <div
                     key={i}
-                    className="w-8 h-8 rounded-full bg-linear-to-br from-blue-400 to-blue-600 border-2 border-white flex items-center justify-center text-white text-xs font-bold"
+                    className="w-8 h-8 xl:w-10 xl:h-10 2xl:w-10 2xl:h-10 4xl:w-14 4xl:h-14 rounded-full bg-linear-to-br from-blue-400 to-blue-600 border-2 border-white flex items-center justify-center text-white text-xs font-bold"
                   >
                     {i}
                   </div>
@@ -74,10 +74,10 @@ export default function HeroSection() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          className="flex- relative flex flex-col gap-10 xl:gap-8 2xl:gap-24 justify-center items-end col-span-5 -mt-15"
+          className="flex- relative flex flex-col gap-10 xl:gap-8 2xl:gap-24 justify-center items-end col-span-5  md:-mt-15 -mt-32  "
         >
           {/* Placeholder for Laptop Boy Image */}
-          <div className="relative w-full h-96 xl:h-85  flex items-center justify-end ">
+          <div className="relative w-full h-96 xl:h-85 2xl:h-full 4xl:h-full flex items-center justify-end ">
             <img src={LaptopBoy} alt="boy with laptop" className="xl:h-full " />
           </div>
           <FloatingIcons />

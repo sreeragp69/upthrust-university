@@ -31,7 +31,7 @@ const AboutSection = () => {
   return (
     <motion.section
       id="about-us"
-      className="mx-auto w-full  py-8 xs:py-10 px-3 lg:px-3 sm:py-12 md:py-16 lg:py-20 overflow-hidden"
+      className="mx-auto w-full  py-8 xs:py-10  lg:px-3 sm:py-12 md:py-16 lg:py-20 overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}

@@ -71,7 +71,7 @@ const containerVariants = {
 
 export default function HowItWorks() {
   return (
-    <section className="w-full py-12 md:py-16 xl:py-10 2xl:py-20 px-4 sm:px-6 lg:px-8 ">
+    <section className="w-full py-12 md:py-16 xl:py-10 2xl:py-20  lg:px-8 ">
       <div className=" mx-auto">
         {/* Header Section */}
         <motion.div

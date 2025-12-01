@@ -72,10 +72,12 @@ const CampusSection = () => {
       topGradient={true}
       bottomGradient={true}
       image={CampusImage}
-      className="mx-auto w-full  py-8 xs:py-10 px-3 lg:px-3 sm:py-12 md:py-16 xl:py-10 2xl:py-20 overflow-hidden "
+      
+      className="mx-auto w-full  py-8 xs:py-10 sm:py-12 md:py-16 xl:py-10 2xl:py-20 overflow-hidden "
     >
-    <div className="max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) mx-auto  px-15">
+    <div className="max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) mx-auto  lg:px-10 px-5">
     <motion.div
+    id="campus"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
@@ -112,7 +114,7 @@ const CampusSection = () => {
           className="text-center mb-8 sm:mb-12 lg:mb-16 w-[80%] xl:w-[70%] 2xl:w-[80%]"
         >
           <Desc
-          className="  xl:text-sm! xl:leading-4! 2xl:leading-7! xl:font-normal!"
+          className="  xl:text-sm! 4xl:text-xl! xl:leading-4! 2xl:leading-7! xl:font-normal! 4xl:leading-6!"
             desc="  In order to ensure that students get both theoretical knowledge and
             practical experience, our programs are made to integrate practical
             learning, real-world resources, and innovative teaching techniques.

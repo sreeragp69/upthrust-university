@@ -28,7 +28,7 @@ const LayoutContent: React.FC = () => {
 
         {/* 🔹 Conditional breakpoints */}
         <div
-          className={` mx-auto ${
+          className={`mx-auto pt-20 lg:pt-0 ${
             useBreakpoints
               ? ""
               : "  max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl)"

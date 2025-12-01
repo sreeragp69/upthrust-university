@@ -62,7 +62,7 @@ export default function HowItWorksCard({
       <div className="flex gap-8 lg:gap-0 flex-row-reverse lg:flex-col items-center justify-center">
         {/* Title */}
         <motion.h3
-          className="text-2xl xl:text-sm 2xl:text-2xl md:text-base lg:text-lg font-bold text-black uppercase xl:leading-4 leading-7 -mb-5 text-start lg:text-center"
+          className="text-2xl xl:text-sm 2xl:text-2xl md:text-base lg:text-lg font-bold text-black uppercase xl:leading-4 4xl:leading-none leading-7 -mb-5 text-start lg:text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.1 }}

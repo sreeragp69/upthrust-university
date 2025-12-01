@@ -99,6 +99,10 @@
   display: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   scrollbar-width: none;

@@ -63,7 +63,7 @@ const CollabSection = () => {
   return (
     <motion.section
       id="about-us"
-      className="mx-auto w-full  py-8 xs:py-10 px-3 lg:px-3 sm:py-12 md:py-16 xl:py-15 2xl:py-20 overflow-hidden"
+      className="mx-auto w-full  py-8 xs:py-10  lg:px-3 sm:py-12 md:py-16 xl:py-15 2xl:py-20 overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
@@ -80,7 +80,7 @@ const CollabSection = () => {
         variants={containerVariants}
       >
         <motion.p
-          className="text-[#585D69] col-span-3  text-center lg:text-left text-xs md:text-sm lg:text-base  xl:text-base  2xl:text-xl 3xl:text-2xl font-normal     font-alexandria lg:leading-6 xl:leading-7 2xl:leading-11 xl:pr-10 2xl:pr-0"
+          className="text-[#585D69] col-span-3  text-center lg:text-left text-sm md:text-sm lg:text-base  xl:text-base  2xl:text-xl 3xl:text-2xl font-normal     font-alexandria lg:leading-6 xl:leading-7 2xl:leading-11 xl:pr-10 2xl:pr-0"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}

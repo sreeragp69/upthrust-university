@@ -3,13 +3,13 @@ import benefitStudent from "../../assets/images/programbenefit/benefitStudent.pn
 
 export default function ProgramBenefitsSection() {
   return (
-    <section className=" py-12 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+    <section id="programs" className=" py-12 md:py-20 lg:py-24">
       <div className=" mx-auto">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16 lg:mb-20">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-5xl font-bold text-gray-900 mb-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-5xl 4xl:text-6xl font-bold text-gray-900 mb-2">
             How does our Cutting-Edge Program{" "} <br />
-            <span className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-4xl 2xl:text-5xl font-bold text-blue-600">
+            <span className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-4xl 2xl:text-5xl 4xl:text-6xl font-bold text-blue-600">
               {" "}
               Benefit Students?
             </span>
@@ -29,14 +29,14 @@ export default function ProgramBenefitsSection() {
             </div>
             {/* Center - Description Text */}
             <div className=" space-y-6 w-full xl:w-[55%] font-alexandria font-light">
-              <p className="text-base md:text-lg xl:text-sm 2xl:text-base text-gray-800 leading-tight">
+              <p className="text-base md:text-lg xl:text-sm 2xl:text-lg 4xl:text-2xl text-gray-800 leading-tight">
                 Our cutting-edge programs emphasize learning by doing rather
                 than merely imparting academic knowledge. Students acquire
                 practical skills that prepare them for the workforce right away
                 through practical projects, real-world simulations, and
                 industry-relevant technologies.
               </p>
-              <p className="text-base md:text-lg xl:text-sm 2xl:text-base text-gray-700 leading-tight">
+              <p className="text-base md:text-lg xl:text-sm 2xl:text-lg 4xl:text-2xl text-gray-700 leading-tight">
                 Our approach, in contrast to traditional programs, places a
                 strong emphasis on problem-solving, teamwork, and portfolio
                 development, enabling students to boldly take on real issues,
@@ -47,9 +47,10 @@ export default function ProgramBenefitsSection() {
           </div>
 
           {/* Right - Benefits */}
-          <div className="md:col-span-3 space-y-6 font-alexandria">
+          <div className="md:col-span-3 space-y-6 font-alexandria flex flex-col justify-between items-center  h-full">
             <div>
-              <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-gray-900 mb-4 md:mb-6 uppercase tracking-wide">
+            <div>
+              <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl 4xl:text-5xl font-bold text-gray-900 mb-4 md:mb-6 uppercase tracking-wide">
                 While Industry Advice <br /> Helps Students
               </h3>
             </div>
@@ -58,19 +59,20 @@ export default function ProgramBenefitsSection() {
             <div className="space-y-4">
               {/* Benefit 1 */}
               <div className="flex gap-3 md:gap-4">
-                <div className="shrink-0 w-4 h-4 md:w-5 xl:w-3 xl:h-3 2xl:w-5 md:h-5 rounded-full bg-blue-500 mt-1.5 md:mt-2"></div>
-                <p className="text-base md:text-lg xl:text-xl text-gray-800 leading-relaxed">
+                <div className="shrink-0 w-4 h-4 md:w-5 md:h-5 xl:w-3 xl:h-3  2xl:w-5 2xl:h-5    rounded-full bg-blue-500 mt-1.5 md:mt-2"></div>
+                <p className="text-base md:text-lg xl:text-xl 4xl:text-2xl text-gray-800 leading-relaxed">
                   Close the gap between the classroom and the workplace
                 </p>
               </div>
 
               {/* Benefit 2 */}
               <div className="flex gap-3 md:gap-4">
-                <div className="shrink-0 w-4 h-4 md:w-5 xl:w-3 xl:h-3 2xl:w-5 md:h-5 rounded-full bg-pink-500 mt-1.5 md:mt-2"></div>
-                <p className="text-base md:text-lg xl:text-xl text-gray-800 leading-relaxed">
+                <div className="shrink-0 w-4 h-4 md:w-5 md:h-5 xl:w-3 xl:h-3  2xl:w-5 2xl:h-5    rounded-full bg-pink-500 mt-1.5 md:mt-2"></div>
+                <p className="text-base md:text-lg xl:text-xl 4xl:text-2xl text-gray-800 leading-relaxed">
                   Gain effective learning through innovative teaching strategies
                 </p>
               </div>
+            </div>
             </div>
 
             {/* Bottom Image */}
@@ -81,6 +83,8 @@ export default function ProgramBenefitsSection() {
                 className="w-full h-auto object-cover"
               />
             </div>
+
+            
           </div>
         </div>
       </div>

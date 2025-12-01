@@ -17,7 +17,7 @@ const menuItems: MenuItem[] = [
   {
     icon: <Home className="h-5 w-5" />,
     label: "Home",
-    href: "#",
+    href: "#home",
     gradient:
       "radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(37,99,235,0.06) 50%, rgba(29,78,216,0) 100%)",
     iconColor: "text-blue-500",
@@ -25,7 +25,7 @@ const menuItems: MenuItem[] = [
   {
     icon: <Bell className="h-5 w-5" />,
     label: "About",
-    href: "#",
+    href: "#about-us",
     gradient:
       "radial-gradient(circle, rgba(249,115,22,0.15) 0%, rgba(234,88,12,0.06) 50%, rgba(194,65,12,0) 100%)",
     iconColor: "text-orange-500",
@@ -33,15 +33,15 @@ const menuItems: MenuItem[] = [
   {
     icon: <Settings className="h-5 w-5" />,
     label: "Programs",
-    href: "#",
+    href: "#programs",
     gradient:
       "radial-gradient(circle, rgba(34,197,94,0.15) 0%, rgba(22,163,74,0.06) 50%, rgba(21,128,61,0) 100%)",
     iconColor: "text-green-500",
   },
   {
     icon: <User className="h-5 w-5" />,
-    label: "Our Centre",
-    href: "#",
+    label: "our centre",
+    href: "#campus",
     gradient:
       "radial-gradient(circle, rgba(239,68,68,0.15) 0%, rgba(220,38,38,0.06) 50%, rgba(185,28,28,0) 100%)",
     iconColor: "text-red-500",
@@ -59,19 +59,54 @@ const menuItems: MenuItem[] = [
 const MobileSidebar: React.FC = () => {
   const { isMobileOpen, toggleMobileSidebar } = useSidebar();
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    toggleMobileSidebar();
+    
+    const targetId = href.replace("#", "");
+    
+    if (targetId === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    const element = document.getElementById(targetId);
+    if (element) {
+      const headerOffset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <AnimatePresence>
       {isMobileOpen && (
         <>
+          {/* Backdrop/Overlay */}
           <motion.div
-            initial={{ y: "100%", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: "100%", opacity: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={toggleMobileSidebar}
+            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          />
+          
+          {/* Sidebar */}
+          <motion.div
+            initial={{ x: "100%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: "100%", opacity: 0 }}
             transition={{ 
               duration: 0.4,
               ease: [0.4, 0, 0.2, 1]
             }}
-            className="fixed inset-0 bg-white z-50 lg:hidden overflow-hidden flex flex-col"
+            className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white z-50 lg:hidden overflow-hidden flex flex-col shadow-2xl"
           >
             {/* Header with Logo and Close Button */}
             <div 
@@ -109,9 +144,7 @@ const MobileSidebar: React.FC = () => {
                     >
                       <a
                         href={item.href}
-                        onClick={() => {
-                          toggleMobileSidebar();
-                        }}
+                        onClick={(e) => handleClick(e, item.href)}
                         className="flex items-center gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors group"
                       >
                         <span

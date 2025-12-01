@@ -59,7 +59,7 @@ const AppFooter: React.FC<FooterProps> = ({ isLoading = false }) => {
       <div className="h-70 md:h-85 lg:h-52 xl:h-45 2xl:h-52 bg-white"></div>
       <div
         id="contact-us"
-        className="px-4  md:px-0 w-full  lg:pt-[200px] 2xl:pt-[250px]  bg-white py-6 sm:py-8 md:py-10 lg:py-16 relative"
+        className="  md:px-0 w-full  lg:pt-[200px] 2xl:pt-[250px]  bg-white py-6 sm:py-8 md:py-10 lg:py-16 relative"
       >
         <BreackPointWrapper>
           <Subscribe />
@@ -69,7 +69,7 @@ const AppFooter: React.FC<FooterProps> = ({ isLoading = false }) => {
             transition={{ duration: 0.6 }}
             className="mt-72 sm:mt-80  md:mt-89 lg:mt-0"
           >
-            <div className="mx-auto   max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) grid grid-cols-1 xl:grid-cols-12 gap-6 md:gap-8 xl:gap-0">
+            <div className="mx-auto   max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) grid grid-cols-1 xl:grid-cols-12 gap-6 md:gap-8 2xl:gap-10">
               <div className="xl:col-span-9 w-full ">
                 {/* Header */}
                 <motion.div

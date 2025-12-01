@@ -1,12 +1,23 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { MenuBar } from "../header/menu-bar";
 import { useSidebar } from "../context/SidebarContext";
 import { Menu } from "lucide-react";
 
 const Header: React.FC = () => {
   const { toggleMobileSidebar, isMobileOpen } = useSidebar();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
@@ -21,7 +32,7 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      <header className="w-full mx-auto  px-0  md:px-0  pb-0  max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl)">
+      <header className="w-full mx-auto  px-0  md:px-0  pb-0  max-w-(--breakpoint-2xl) 2xl:max-w-(--breakpoint-3xl) 4xl:max-w-(--breakpoint-4xl) ">
         <div className=" mx-auto  relative sm:px-1 lg:px-2 xl:px-3 py-8 pt-16 lg:pt-8 xl:pt-10  ">
           <div className="h-96 w-96  xl:-left-[10%] -top-[50%]  absolute rounded-full  blur-[150px]  opacity-40 bg-themePrimary"></div>
           <div className=" items-center justify-between">
@@ -29,7 +40,7 @@ const Header: React.FC = () => {
               <img
                 src="/logo.svg"
                 alt="Upthrust University"
-                className="h-10 sm:h-12 md:h-14 lg:h-16 xl:h-24 2xl:h-36 w-auto z-50"
+                className="h-8 sm:h-10 md:h-12 lg:h-16 xl:h-24 2xl:h-28 3xl:h-36 w-auto z-50"
               />
             </div>
 
@@ -40,7 +51,7 @@ const Header: React.FC = () => {
 
             {/* Hamburger Menu Button (visible below lg when sidebar is closed) - Right side */}
             {!isMobileOpen && (
-              <div className="flex justify-end lg:hidden">
+              <div className="flex justify-end lg:hidden absolute right-5 top-1/2 -translate-y-1/2">
                 <button
                   onClick={toggleMobileSidebar}
                   className="p-2 rounded-lg hover:bg-gray-100 transition-colors z-50 relative"
