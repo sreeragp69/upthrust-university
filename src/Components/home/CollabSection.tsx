@@ -124,7 +124,7 @@ const CollabSection = () => {
           <img
             src={collabMan}
             alt="collabMan"
-            className="absolute bottom-0 right-0 lg:-right-10 w-[40%] lg:w-[40%]"
+            className="absolute bottom-0 right-0 lg:-right-10 w-[40%] md:w-[30%] lg:w-[40%]"
           />
         </div>
       </motion.div>

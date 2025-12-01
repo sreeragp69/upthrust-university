@@ -24,7 +24,7 @@ export default function ProgramBenefitsSection() {
               <img
                 src={personWearingHeadset}
                 alt="Person wearing VR headset"
-                className="lg:w-[30vw] lg:h-[55vh] rounded-2xl object-contain absolute hidden xl:block lg:bottom-0 xl:bottom-0 2xl:bottom-0 lg:-left-16 xl:-left-10 2xl:-left-16"
+                className="lg:w-[30vw] lg:h-[55vh] 4xl:max-h-150  rounded-2xl object-contain absolute hidden xl:block lg:bottom-0 xl:bottom-0 2xl:bottom-0 4xl:-bottom-2 5xl:-bottom-0 lg:-left-16 xl:-left-10 2xl:-left-16 5xl:-left-[25%]"
               />
             </div>
             {/* Center - Description Text */}
