@@ -23,11 +23,7 @@ const SuccessStoryLeft = ({ itemVariants }: SuccessStoryLeftProps) => {
           </span>
 
           <Desc
-            desc="With clear instructions, examples, and insights that improve
-            comprehension and memory. These films, which are intended to assist
-            self-paced learning and ongoing skill development, help students
-            understand difficult subjects by guiding them through principles,
-            real-world applications, and industry practices."
+            desc="At The Upthrust, every student’s journey is a testament to what passion, the right guidance, and hands-on learning can achieve. From beginners taking their first step into the world of game development and digital marketing to professionals transforming their careers, our learners consistently turn their dreams into real, measurable success. Their projects, internships, company placements, and entrepreneurial breakthroughs reflect the quality of training and mentorship they receive here. These success stories aren’t just achievements — they’re proof of how The Upthrust empowers students to level up their skills, confidence, and future."
           />
         </div>
 
